@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* Add custom Bengali font if needed */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Noto Sans Bengali', sans-serif;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
