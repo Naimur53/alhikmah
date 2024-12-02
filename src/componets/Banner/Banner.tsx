@@ -1,14 +1,12 @@
 "use client";
 
-import { Card } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
-  CarouselPrevious,
+  CarouselPrevious
 } from "@/components/ui/carousel";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
 type Book = {
   id: number;
@@ -24,22 +22,22 @@ const books: Book[] = [
     title: "উসমানি সালতানাতের ইতিহাস (৪ খন্ড)",
     author: "ড. রাগিব সারজানি",
     publisher: "মাকতাবাতুল হাসান",
-    imageUrl: "/book-cover.jpg", // Replace with your actual image
+    imageUrl: "/book-cover.jpg" // Replace with your actual image
   },
   {
     id: 1,
     title: "উসমানি সালতানাতের ইতিহাস (৪ খন্ড)",
     author: "ড. রাগিব সারজানি",
     publisher: "মাকতাবাতুল হাসান",
-    imageUrl: "/book-cover.jpg", // Replace with your actual image
+    imageUrl: "/book-cover.jpg" // Replace with your actual image
   },
   {
     id: 1,
     title: "উসমানি সালতানাতের ইতিহাস (৪ খন্ড)",
     author: "ড. রাগিব সারজানি",
     publisher: "মাকতাবাতুল হাসান",
-    imageUrl: "/book-cover.jpg", // Replace with your actual image
-  },
+    imageUrl: "/book-cover.jpg" // Replace with your actual image
+  }
   // Add more books as needed
 ];
 

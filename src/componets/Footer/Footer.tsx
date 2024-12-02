@@ -1,7 +1,7 @@
-import React from 'react';
-import SocialLinks from './SocialLinks';
-import ImportantLinks from './ImportantLinks';
-import ContactInfo from './ContactInfo';
+import React from "react";
+import SocialLinks from "./socialLinks";
+import ImportantLinks from "./ImportantLinks";
+import ContactInfo from "./ContactInfo";
 
 const Footer = () => {
   return (
@@ -12,10 +12,13 @@ const Footer = () => {
           <div className="space-y-6">
             <div className="flex items-center gap-2">
               <div className="w-[30px] h-[30px] md:w-[50px] md:h-[50px] bg-white"></div>
-              <h2 className="text-white text-[28px] md:text-[40px]">আল হিকমাহ</h2>
+              <h2 className="text-white text-[28px] md:text-[40px]">
+                আল হিকমাহ
+              </h2>
             </div>
             <p className=" text-[18px] md:text-[24px] text-[#98B6CB]">
-              আমাদের লক্ষ্য ও উদ্দেশ্য হল সবচেয়ে উন্নত উন্নয় থেকে বিশুদ্ধ দ্বীনি সকলের জন্য উন্মুক্ত করে দেয়া।
+              আমাদের লক্ষ্য ও উদ্দেশ্য হল সবচেয়ে উন্নত উন্নয় থেকে বিশুদ্ধ
+              দ্বীনি সকলের জন্য উন্মুক্ত করে দেয়া।
             </p>
             <SocialLinks />
           </div>
@@ -29,9 +32,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="mt-12 py-8 border-t border-gray-700">
-          <p className="text-center text-gray-400">
-            কপিরাইট © আল-হিকমাহ ২০২৪
-          </p>
+          <p className="text-center text-gray-400">কপিরাইট © আল-হিকমাহ ২০২৪</p>
         </div>
       </div>
     </footer>

@@ -6,9 +6,8 @@ import {
   CarouselContent,
   CarouselItem,
   CarouselNext,
-  CarouselPrevious,
+  CarouselPrevious
 } from "@/components/ui/carousel";
-import { MoveLeft, MoveRight } from "lucide-react";
 
 type Book = {
   id: number;
@@ -21,32 +20,32 @@ const books: Book[] = [
     id: 1,
     title: "সহিহ বুখারী",
     imageUrl:
-      "https://images.unsplash.com/photo-1589998059171-988d887df646?q=80&w=1776&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1589998059171-988d887df646?q=80&w=1776&auto=format&fit=crop"
   },
   {
     id: 2,
     title: "সুনান ইবনে মাজাহ",
     imageUrl:
-      "https://images.unsplash.com/photo-1591728652796-c7cc4719c533?q=80&w=1776&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1591728652796-c7cc4719c533?q=80&w=1776&auto=format&fit=crop"
   },
   {
     id: 3,
     title: "মুয়াত্তা ইমাম মালিক",
     imageUrl:
-      "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?q=80&w=1770&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?q=80&w=1770&auto=format&fit=crop"
   },
   {
     id: 4,
     title: "সুনান আবু দাউদ",
     imageUrl:
-      "https://images.unsplash.com/photo-1633008808000-ce86bff6c1ed?q=80&w=1776&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1633008808000-ce86bff6c1ed?q=80&w=1776&auto=format&fit=crop"
   },
   {
     id: 5,
     title: "সুনান আবু দাউদ",
     imageUrl:
-      "https://images.unsplash.com/photo-1633008808000-ce86bff6c1ed?q=80&w=1776&auto=format&fit=crop",
-  },
+      "https://images.unsplash.com/photo-1633008808000-ce86bff6c1ed?q=80&w=1776&auto=format&fit=crop"
+  }
 ];
 
 export function HadisBooks() {

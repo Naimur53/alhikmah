@@ -1,12 +1,12 @@
 import React from "react";
 import { Writers } from "@/data/Writers";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardTitle } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
-  CarouselPrevious,
+  CarouselPrevious
 } from "@/components/ui/carousel";
 import { DynamicHeader } from "@/shared/DynamicHeader";
 
@@ -43,10 +43,10 @@ export function PopulerWriters() {
                       />
                     </div>
                     {/* Name Row */}
-                    
-                      <CardTitle className="line-clamp-2 cursor-pointer text-[18px] pt-[20px] font-semibold text-[#3B4856]">
-                        {writer.name}
-                      </CardTitle>
+
+                    <CardTitle className="line-clamp-2 cursor-pointer text-[18px] pt-[20px] font-semibold text-[#3B4856]">
+                      {writer.name}
+                    </CardTitle>
                   </Card>
                 </div>
               </CarouselItem>

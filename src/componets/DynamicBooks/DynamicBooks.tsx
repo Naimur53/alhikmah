@@ -1,13 +1,12 @@
 import * as React from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
-  CarouselPrevious,
+  CarouselPrevious
 } from "@/components/ui/carousel";
-import Link from "next/link";
 import { DynamicHeader } from "@/shared/DynamicHeader";
 import { FaHeart } from "react-icons/fa6";
 
@@ -29,7 +28,7 @@ export function DynamicBooks({
   heading2,
   highlight,
   description,
-  books,
+  books
 }: DynamicBooksProps) {
   return (
     <div className="w-full max-w-6xl mx-auto px-4 py-12">

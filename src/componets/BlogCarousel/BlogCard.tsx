@@ -1,5 +1,4 @@
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Calendar, User } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BlogPost } from "@/data/BlogPost";
 
 interface BlogCardProps {
@@ -18,13 +17,12 @@ export function BlogCard({ post }: BlogCardProps) {
           />
         </div>
         <CardHeader>
-        <div className=" text-[#838383] px-3 py-1 rounded-full font-semibold text-[16px]">
+          <div className=" text-[#838383] px-3 py-1 rounded-full font-semibold text-[16px]">
             {post.category}
           </div>
           <CardTitle className="line-clamp-2 hover:text-primary cursor-pointer font-semibold text-[20px]">
             {post.title}
           </CardTitle>
-          
         </CardHeader>
         <CardContent className="flex-grow">
           <div className="flex justify-between text-sm text-muted-foreground">
@@ -32,7 +30,6 @@ export function BlogCard({ post }: BlogCardProps) {
               {post.author}
             </div>
             <div className="flex items-center text-[16px] text-[#838383]">
-              
               {post.date}
             </div>
           </div>

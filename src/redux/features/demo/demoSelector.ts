@@ -1,4 +1,3 @@
+// import { RootState } from "@/redux/app/store";
 
-import { RootState } from "@/redux/app/store";
-
-export const selectorDemo = (state: RootState) => state.demo;
+// export const selectorDemo = (state: RootState) => state.demo;
