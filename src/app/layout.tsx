@@ -1,20 +1,20 @@
-'use client';
+"use client";
 
+import { store } from "@/redux/app/store";
 import { Provider } from "react-redux";
-    import { store } from "@/redux/app/store";
-    
-import './globals.css';
+
+import "./globals.css";
 
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body><Provider store={store}>
-          {children}
-        </Provider></body>
-    </html>
-  );
+    return (
+        <html lang="en">
+            <body>
+                <Provider store={store}>{children}</Provider>
+            </body>
+        </html>
+    );
 }

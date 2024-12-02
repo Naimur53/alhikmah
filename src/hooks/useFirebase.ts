@@ -1,90 +1,81 @@
+import { useEffect, useState } from "react";
 
-    import { useEffect, useState } from "react";
-    import {
-      signInWithPopup,
-      getRedirectResult,
- signInWithRedirect, 
-      GoogleAuthProvider,
+import {
+    getAuth,
+    getRedirectResult,
+    GoogleAuthProvider,
+    signInWithPopup,
+    signInWithRedirect,
+    User,
+} from "firebase/auth";
 
-      getAuth,
-      User,
-    } from "firebase/auth";
-    import firebaseInit from "../firebase/firebase.init";
-    
-    interface AuthMethods {
-      signInWithGoogle?: (usePopup?: boolean) => Promise<void>;
-      signInWithFacebook?: (usePopup?: boolean) => Promise<void>;
-      signInWithGitHub?: (usePopup?: boolean) => Promise<void>;
-      signInWithEmailAndPassword?: (email: string, password: string) => Promise<void>;
-      signUpWithEmailAndPassword?: (email: string, password: string) => Promise<void>;
-      signOut: () => Promise<void>;
-    }
-    
-    const useFirebaseAuth = (): { user: User | null } & AuthMethods => {
-      firebaseInit();
-      const [user, setUser] = useState<User | null>(null);
-      console.log(user);
-      const auth = getAuth();
-    
-      useEffect(() => {
+import firebaseInit from "../firebase/firebase.init";
+
+interface AuthMethods {
+    signInWithGoogle?: (usePopup?: boolean) => Promise<void>;
+    signInWithFacebook?: (usePopup?: boolean) => Promise<void>;
+    signInWithGitHub?: (usePopup?: boolean) => Promise<void>;
+    signInWithEmailAndPassword?: (email: string, password: string) => Promise<void>;
+    signUpWithEmailAndPassword?: (email: string, password: string) => Promise<void>;
+    signOut: () => Promise<void>;
+}
+
+const useFirebaseAuth = (): { user: User | null } & AuthMethods => {
+    firebaseInit();
+    const [user, setUser] = useState<User | null>(null);
+    console.log(user);
+    const auth = getAuth();
+
+    useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged((authUser) => {
-          if (authUser) {
-            setUser(authUser);
-          } else {
-            setUser(null);
-          }
+            if (authUser) {
+                setUser(authUser);
+            } else {
+                setUser(null);
+            }
         });
-    
+
         return () => unsubscribe();
-      }, [auth]); 
-    
-      
-      
-      const signInWithGoogle = async (usePopup = true): Promise<void> => {
+    }, [auth]);
+
+    const signInWithGoogle = async (usePopup = true): Promise<void> => {
         const provider = new GoogleAuthProvider();
         if (usePopup) {
-          await signInWithPopup(auth, provider);
+            await signInWithPopup(auth, provider);
         } else {
-          await signInWithRedirect(auth, provider);
+            await signInWithRedirect(auth, provider);
         }
-      };
-      
+    };
 
-      
-    
-      useEffect(() => {
-      const handleRedirectResult = async (): Promise<void> => {
-        try {
-          const result = await getRedirectResult(auth);
-          if (result?.user) {
-            setUser(result?.user);
-          }
-        } catch (error) {
-          console.error("Error handling redirect:", error);
-        }
-      };
-  
-      handleRedirectResult();
+    useEffect(() => {
+        const handleRedirectResult = async (): Promise<void> => {
+            try {
+                const result = await getRedirectResult(auth);
+                if (result?.user) {
+                    setUser(result?.user);
+                }
+            } catch (error) {
+                console.error("Error handling redirect:", error);
+            }
+        };
+
+        handleRedirectResult();
     }, [auth]);
-    
-     
-    
-      const signOut = async (): Promise<void> => {
+
+    const signOut = async (): Promise<void> => {
         try {
-          await auth.signOut();
+            await auth.signOut();
         } catch (error) {
-          console.error("Error signing out:", error);
+            console.error("Error signing out:", error);
         }
-      };
-    
-      return {
-        user, 
+    };
+
+    return {
+        user,
         signInWithGoogle,
 
         signOut,
-      };
     };
-    
-    export default useFirebaseAuth;
-  
-  
+};
+
+export default useFirebaseAuth;
