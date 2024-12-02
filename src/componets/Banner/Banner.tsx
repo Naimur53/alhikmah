@@ -7,6 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious
 } from "@/components/ui/carousel";
+import Image from "next/image";
 
 type Book = {
   id: number;
@@ -57,9 +58,12 @@ export function Banner() {
               <CarouselItem key={book.id}>
                 <div className="flex flex-col items-center text-center px-4">
                   <div className="mb-8">
-                    <img
-                      src={`/images/${book.imageUrl}`}
+                    <Image
+                      src={`/images/newbook1.jpg`}
                       alt={book.title}
+                      height={500}
+                      quality={100}
+                      width={500}
                       className="w-48 h-64 object-cover rounded-lg shadow-lg"
                     />
                   </div>
