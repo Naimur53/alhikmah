@@ -10,7 +10,7 @@ export function NavLink({ href, children }: NavLinkProps) {
   return (
     <Link
       href={href}
-      className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors"
+      className="text-[#646464] text-[18px] hover:text-[#1F618D] px-3 font-semibold py-2 transition-colors"
     >
       {children}
     </Link>
