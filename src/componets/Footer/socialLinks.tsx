@@ -1,11 +1,16 @@
-import React from 'react';
-import { FaFacebookF, FaInstagram, FaPinterestP, FaWhatsapp } from 'react-icons/fa';
+import React from "react";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaPinterestP,
+  FaWhatsapp,
+} from "react-icons/fa";
 
 const socialLinks = [
-  { icon: <FaFacebookF />, href: '#', label: 'Facebook' },
-  { icon: <FaInstagram />, href: '#', label: 'Instagram' },
-  { icon: <FaPinterestP />, href: '#', label: 'Pinterest' },
-  { icon: <FaWhatsapp />, href: '#', label: 'WhatsApp' }
+  { icon: <FaFacebookF />, href: "#", label: "Facebook" },
+  { icon: <FaInstagram />, href: "#", label: "Instagram" },
+  { icon: <FaPinterestP />, href: "#", label: "Pinterest" },
+  { icon: <FaWhatsapp />, href: "#", label: "WhatsApp" },
 ];
 
 const SocialLinks = () => {
@@ -16,7 +21,8 @@ const SocialLinks = () => {
           key={index}
           href={link.href}
           aria-label={link.label}
-          className="w-10 h-10 bg-[#1B3654] text-white flex items-center justify-center rounded-full hover:bg-[#2d4a6d] transition-colors"
+          className="w-10 h-10 bg-[#1B3654] text-white flex items-center justify-center rounded-md"
+
         >
           {link.icon}
         </a>

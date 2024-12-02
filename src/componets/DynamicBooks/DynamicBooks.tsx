@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/carousel";
 import Link from "next/link";
 import { DynamicHeader } from "@/shared/DynamicHeader";
+import { FaHeart } from "react-icons/fa6";
 
 type DynamicBooksProps = {
   heading1: string;
@@ -42,53 +43,49 @@ export function DynamicBooks({
 
       {/* Carousel */}
       <Carousel className="w-full">
-        <CarouselContent className="-ml-2 md:-ml-4">
-          {books?.length > 0 ? (
-            books.map((book) => (
-              <CarouselItem key={book.id} className="pl-2 md:pl-4 md:basis-1/4">
-                <div className="group h-full bg-[#F7F7F7] hover:bg-[#0D293B] transition duration-500 rounded-[10px] p-[20px]">
-                  <Card className="h-full flex flex-col border-none shadow-none bg-inherit">
-                    <div className="relative h-48 w-full overflow-hidden rounded-t-lg">
+        <CarouselContent className="-ml-4">
+          {books.map((book) => (
+            <CarouselItem
+              key={book.id}
+              className="pl-4 md:basis-1/2 lg:basis-1/4"
+            >
+              <div className="relative group">
+                <Card className="border-2 border-gray-100 overflow-hidden bg-gray-50 transition-all duration-500 hover:bg-[#0D293B]">
+                  <div className="p-4">
+                    <div className="relative h-64 mb-4">
                       <img
                         src={book.imageUrl}
                         alt={book.title}
-                        className="lg:w-[220px] w-full h-[500px] md:h-[335px] object-contain transition-transform duration-300 hover:scale-110"
+                        className="w-full h-full object-cover rounded-lg"
                       />
+                      <button className="absolute top-2 right-2 p-2 rounded-full bg-white/80 hover:bg-white transition-colors">
+                        <FaHeart className="w-5 h-5" />
+                      </button>
                     </div>
-                    <CardHeader>
-                      <CardTitle className="line-clamp-2 cursor-pointer text-[24px] font-semibold transition-colors group-hover:text-white">
-                        {book.title}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="flex-grow">
-                      <div className="flex justify-between text-sm transition-colors group-hover:text-white">
-                        <Link
-                          href={book.readMoreLink}
-                          className="transition-colors group-hover:text-[#F3F630] text-[#1F618D] text-[20px]"
-                        >
-                          এখনি পড়ুন
-                        </Link>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-              </CarouselItem>
-            ))
-          ) : (
-            <p className="text-center text-gray-500">কোন বই পাওয়া যায়নি।</p>
-          )}
+                    <h3 className="text-xl font-semibold mb-4 group-hover:text-white">
+                      {book.title}
+                    </h3>
+                    <div className="flex justify-between items-center">
+                      <a
+                        href={book.readMoreLink}
+                        className="text-blue-600 group-hover:text-[#F3F630]"
+                      >
+                        {book.readMoreLink}
+                      </a>
+                    </div>
+                  </div>
+                </Card>
+              </div>
+            </CarouselItem>
+          ))}
         </CarouselContent>
-
         {/* Navigation and Button */}
-        <div className="flex items-center justify-center space-x-4 mt-6">
-          <CarouselPrevious className="px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition-colors" />
-          <button
-            type="button"
-            className="self-start px-6 py-3 bg-[#E7F54E] text-black font-semibold rounded hover:bg-[#d4e23a] transition-colors"
-          >
+        <div className="flex items-center justify-center gap-4 mt-8">
+          <CarouselPrevious className="static mt-[40px] bg-gray-800 rounded-sm hover:bg-gray-700 p-[20px] hover:text-white text-white" />
+          <button className="px-6 py-[10px] bg-[#E7F54E] text-black font-semibold rounded-md hover:bg-[#d4e23a] transition-colors">
             সকল বই
           </button>
-          <CarouselNext className="px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition-colors" />
+          <CarouselNext className="static mt-[40px] bg-gray-800 hover:bg-gray-700 p-[20px] rounded-sm hover:text-white text-white" />
         </div>
       </Carousel>
     </div>

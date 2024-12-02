@@ -9,12 +9,12 @@ const links = [
 
 const ImportantLinks = () => {
   return (
-    <div className="space-y-3">
-      <h3 className="text-white text-xl mb-4">প্রয়োজনীয় লিংক</h3>
+    <div className="lg:pl-[100px] space-y-3">
+      <h3 className="text-white font-semibold text-[24px] mb-4">প্রয়োজনীয় লিংক</h3>
       <ul className="space-y-2">
         {links.map((link, index) => (
           <li key={index}>
-            <a href={link.href} className="text-white hover:text-gray-300 transition-colors">
+            <a href={link.href} className="text-white text-[18px] md:text-[20px] pb-[20px] hover:text-gray-300 transition-colors">
               {link.text}
             </a>
           </li>

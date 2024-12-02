@@ -5,16 +5,16 @@ import ContactInfo from './ContactInfo';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0F1F31] py-16">
+    <footer className="bg-[#0F1F31] pt-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* About Section */}
           <div className="space-y-6">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-white"></div>
-              <h2 className="text-white text-xl">আল হিকমাহ</h2>
+              <div className="w-[30px] h-[30px] md:w-[50px] md:h-[50px] bg-white"></div>
+              <h2 className="text-white text-[28px] md:text-[40px]">আল হিকমাহ</h2>
             </div>
-            <p className="text-white">
+            <p className=" text-[18px] md:text-[24px] text-[#98B6CB]">
               আমাদের লক্ষ্য ও উদ্দেশ্য হল সবচেয়ে উন্নত উন্নয় থেকে বিশুদ্ধ দ্বীনি সকলের জন্য উন্মুক্ত করে দেয়া।
             </p>
             <SocialLinks />
@@ -28,7 +28,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="mt-12 pt-8 border-t border-gray-700">
+        <div className="mt-12 py-8 border-t border-gray-700">
           <p className="text-center text-gray-400">
             কপিরাইট © আল-হিকমাহ ২০২৪
           </p>
