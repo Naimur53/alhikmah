@@ -58,7 +58,7 @@ export function Banner() {
                 <div className="flex flex-col items-center text-center px-4">
                   <div className="mb-8">
                     <img
-                      src={book.imageUrl}
+                      src={`/images/${book.imageUrl}`}
                       alt={book.title}
                       className="w-48 h-64 object-cover rounded-lg shadow-lg"
                     />
