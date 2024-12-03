@@ -1,7 +1,10 @@
 "use client";
 
+import Link from "next/link";
+
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import { BsArrowLeftCircle } from "react-icons/bs";
 import { z } from "zod";
 
 import { Button } from "@/components/ui/button";
@@ -27,6 +30,11 @@ const ForgotPasswordForm = () => {
 
     return (
         <div className="min-w-[350px] max-w-[670px] md:min-w-[665px]">
+            <div className="pb-[30px]">
+                <Link href="/auth/sign-in">
+                    <BsArrowLeftCircle className="size-[50px] text-primary-500" />
+                </Link>
+            </div>
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)}>
                     {/* Heading */}
@@ -34,7 +42,9 @@ const ForgotPasswordForm = () => {
                         পাসওয়ার্ড <span className="text-light-blue-600">ভুলে </span> গেছেন
                     </h1>
 
-                    <p className="text-[20px] pb-[20px] text-grey-800">নির্ধারিত ক্ষেত্রে আপনার অ্যাকাউন্টের সাথে যুক্ত ইমেল <br /> ঠিকানা প্রদান করুন</p>
+                    <p className="pb-[20px] text-[20px] text-grey-800">
+                        নির্ধারিত ক্ষেত্রে আপনার অ্যাকাউন্টের সাথে যুক্ত ইমেল <br /> ঠিকানা প্রদান করুন
+                    </p>
 
                     {/* Email Input */}
                     <CustomFormInput
