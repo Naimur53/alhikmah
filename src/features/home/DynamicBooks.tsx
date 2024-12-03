@@ -46,13 +46,13 @@ export function DynamicBooks({ heading1, heading2, highlight, description, books
                                                 <FaHeart className="h-5 w-5" />
                                             </button>
                                         </div>
-                                        <h3 className="mb-4 text-xl font-semibold transition-all duration-500 group-hover:text-white">
+                                        <h3 className="mb-4 text-xl font-semibold transition-all duration-500 text-grey-900 group-hover:text-white">
                                             {book.title}
                                         </h3>
                                         <div className="flex items-center justify-between">
                                             <a
                                                 href={book.readMoreLink}
-                                                className="text-blue-600 transition-all duration-500 group-hover:text-[#F3F630]"
+                                                className="text-blue-600 transition-all duration-500 group-hover:text-yellow-500"
                                             >
                                                 {book.readMoreLink}
                                             </a>
@@ -66,7 +66,7 @@ export function DynamicBooks({ heading1, heading2, highlight, description, books
                 {/* Navigation and Button */}
                 <div className="mt-8 flex items-center justify-center gap-4">
                     <CarouselPrevious className="static mt-[40px] rounded-sm bg-gray-800 p-[20px] text-white hover:bg-gray-700 hover:text-white" />
-                    <button className="rounded-md bg-[#E7F54E] px-6 py-[10px] font-semibold text-black transition-colors hover:bg-[#d4e23a]">
+                    <button className="rounded-md bg-yellow-500 px-6 py-[10px] font-semibold text-dark-900 transition-colors hover:bg-yellow-300">
                         সকল বই
                     </button>
                     <CarouselNext className="static mt-[40px] rounded-sm bg-gray-800 p-[20px] text-white hover:bg-gray-700 hover:text-white" />

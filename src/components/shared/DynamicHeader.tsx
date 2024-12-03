@@ -17,7 +17,7 @@ export function DynamicHeader({
                 {heading1} <span className="text-[#6AB6E8]">{highlight} </span>
                 {heading2}{" "}
             </h1>
-            <p className="mx-auto max-w-[950px] pb-[30px] text-[18px] text-[#838383] md:pb-[55px] md:text-[24px] lg:text-[28px]">
+            <p className="mx-auto max-w-[950px] pb-[30px] text-[18px] text-grey-800 md:pb-[55px] md:text-[24px] lg:text-[28px]">
                 {description}
             </p>
         </div>

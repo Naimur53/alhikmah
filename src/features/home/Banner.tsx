@@ -39,7 +39,7 @@ const books: Book[] = [
 
 export function Banner() {
     return (
-        <div className="min-h-[80vh]  flex items-center w-full bg-[#0D293B] py-16">
+        <div className="min-h-[80vh]  flex items-center w-full bg-primary-900 py-16">
             <div className="relative mx-auto container px-4">
                 {/* <div className="absolute right-4 top-4">
                     <button className="rounded-[8px] bg-[#193C53] px-[20px] py-[10px] text-[#BACEDC] transition-colors hover:bg-[#2a5c7d]">
@@ -55,7 +55,7 @@ export function Banner() {
                                   
                                     <div>
                                     <h2 className="mb-4 h1 text-white">{book.title}</h2>
-                                    <div className="space-y-2 text-gray-300">
+                                    <div className="space-y-2 text-dark-200">
                                         <p>লেখক : {book.author}</p>
                                         <p>প্রকাশনী : {book.publisher}</p>
                                     </div>
