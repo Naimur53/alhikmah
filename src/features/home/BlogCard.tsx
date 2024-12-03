@@ -12,12 +12,12 @@ export function BlogCard({ post }: BlogCardProps) {
     return (
         <div className="h-full rounded-[10px] bg-[#F7F7F7] p-[30px]">
             <Card className="flex h-full flex-col border-none bg-inherit shadow-none">
-                <div className="h-48 w-full overflow-hidden rounded-t-lg">
+                <div className="h-[300px] w-full overflow-hidden rounded-t-lg">
                     <Image
                         src={post.imageUrl}
                         alt={post.title}
-                        className="h-full w-full object-cover transition-transform duration-300 hover:scale-110"
-                        height={192}
+                        className="h-full w-full object-cover "
+                        height={250}
                         width={384}
                     />
                 </div>

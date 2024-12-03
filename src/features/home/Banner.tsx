@@ -39,30 +39,22 @@ const books: Book[] = [
 
 export function Banner() {
     return (
-        <div className="h-[80vh] min-h-[500px] w-full bg-[#0D293B] py-16">
-            <div className="relative mx-auto max-w-6xl px-4">
-                <div className="absolute right-4 top-4">
+        <div className="min-h-[80vh]  flex items-center w-full bg-[#0D293B] py-16">
+            <div className="relative mx-auto container px-4">
+                {/* <div className="absolute right-4 top-4">
                     <button className="rounded-[8px] bg-[#193C53] px-[20px] py-[10px] text-[#BACEDC] transition-colors hover:bg-[#2a5c7d]">
                         রিডার্স বই
                     </button>
-                </div>
+                </div> */}
 
                 <Carousel className="w-full">
                     <CarouselContent>
                         {books.map((book) => (
                             <CarouselItem key={book.id}>
-                                <div className="flex flex-col items-center px-4 text-center">
-                                    <div className="mb-8">
-                                        <Image
-                                            src={`/images/newbook1.jpg`}
-                                            alt={book.title}
-                                            height={500}
-                                            quality={100}
-                                            width={500}
-                                            className="h-64 w-48 rounded-lg object-cover shadow-lg"
-                                        />
-                                    </div>
-                                    <h2 className="mb-4 text-3xl font-bold text-white">{book.title}</h2>
+                                <div className="flex lg:flex-row flex-col-reverse items-center justify-between text-center lg:text-start mx-auto max-w-[1100px]">
+                                  
+                                    <div>
+                                    <h2 className="mb-4 h1 text-white">{book.title}</h2>
                                     <div className="space-y-2 text-gray-300">
                                         <p>লেখক : {book.author}</p>
                                         <p>প্রকাশনী : {book.publisher}</p>
@@ -70,6 +62,18 @@ export function Banner() {
                                     <button className="mt-8 rounded-md bg-[#E7F54E] px-8 py-3 font-semibold text-black transition-colors hover:bg-[#d4e23a]">
                                         বইটি পড়ুন
                                     </button>
+                                    </div>
+                                    
+                                    <div className="mb-8">
+                                        <Image
+                                            src={`/images/newbook1.jpg`}
+                                            alt={book.title}
+                                            height={500}
+                                            quality={100}
+                                            width={500}
+                                            className="md:h-[400px] h-[250px] w-[200px] md:w-[320px] rounded-lg object-cover shadow-lg"
+                                        />
+                                    </div>
                                 </div>
                             </CarouselItem>
                         ))}

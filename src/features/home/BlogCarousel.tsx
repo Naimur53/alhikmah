@@ -1,6 +1,6 @@
 import { BlogPost } from "@/data/BlogPost";
 import { BlogCard } from "@/features/home/BlogCard";
-import { DynamicHeader } from "@/shared/DynamicHeader";
+import { DynamicHeader } from "@/components/shared/DynamicHeader";
 
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 

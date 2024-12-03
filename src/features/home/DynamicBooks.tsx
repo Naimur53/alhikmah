@@ -1,11 +1,11 @@
 import * as React from "react";
 import Image from "next/image";
 
-import { DynamicHeader } from "@/shared/DynamicHeader";
 import { FaHeart } from "react-icons/fa6";
 
 import { Card } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { DynamicHeader } from "@/components/shared/DynamicHeader";
 
 type DynamicBooksProps = {
     heading1: string;
@@ -46,13 +46,13 @@ export function DynamicBooks({ heading1, heading2, highlight, description, books
                                                 <FaHeart className="h-5 w-5" />
                                             </button>
                                         </div>
-                                        <h3 className="mb-4 text-xl font-semibold group-hover:text-white">
+                                        <h3 className="mb-4 text-xl font-semibold transition-all duration-500 group-hover:text-white">
                                             {book.title}
                                         </h3>
                                         <div className="flex items-center justify-between">
                                             <a
                                                 href={book.readMoreLink}
-                                                className="text-blue-600 group-hover:text-[#F3F630]"
+                                                className="text-blue-600 transition-all duration-500 group-hover:text-[#F3F630]"
                                             >
                                                 {book.readMoreLink}
                                             </a>

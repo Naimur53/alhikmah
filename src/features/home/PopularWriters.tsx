@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 import { Writers } from "@/data/Writers";
-import { DynamicHeader } from "@/shared/DynamicHeader";
+import { DynamicHeader } from "@/components/shared/DynamicHeader";
 
 import { Card, CardTitle } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
