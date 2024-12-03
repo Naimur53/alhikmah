@@ -44,7 +44,7 @@ export function TestimonialSlider() {
   );
 
   return (
-    <div className="w-full h-full flex items-center justify-start">
+    <div className="w-full h-full flex items-center justify-start pb-[70px] md:pb-0">
       <Carousel
         plugins={[plugin.current]}
         className="w-full max-w-2xl"

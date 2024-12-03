@@ -43,9 +43,9 @@ const CustomFormInput = <T extends FieldValues>({
             defaultValue={defaultValue}
             render={({ field, fieldState: { error } }) => (
                 <FormItem className="space-y-1">
-                    <FormLabel>{label}</FormLabel>
+                    <FormLabel className="text-[20px]  leading-[32px] text-dark-500">{label}</FormLabel>
                     <FormControl>
-                        <div className="relative">
+                        <div className="relative pt-[10px] pb-[10px]">
                             <Input
                                 placeholder={placeholder}
                                 type={(type === "password" ? (show ? "text" : "password") : type) || "text"}
@@ -55,19 +55,19 @@ const CustomFormInput = <T extends FieldValues>({
                                     field.onChange(type === "number" ? Number(e.target.value) : e.target.value)
                                 }
                                 disabled={disabled}
-                                min={min}
+                                min={min} 
                             />
                             {type === "password" &&
                                 (show ? (
                                     <Eye
                                         onClick={() => setShow((prev) => !prev)}
-                                        className="absolute right-4 top-[30%] cursor-pointer"
+                                        className="absolute right-4 top-[40%] cursor-pointer"
                                         size={16}
                                     />
                                 ) : (
                                     <EyeOff
                                         onClick={() => setShow((prev) => !prev)}
-                                        className="absolute right-4 top-[30%] cursor-pointer"
+                                        className="absolute right-4 top-[40%] cursor-pointer"
                                         size={16}
                                     />
                                 ))}
