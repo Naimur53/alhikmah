@@ -1,5 +1,5 @@
+"use client";
 import { useState } from "react";
-
 import { Eye, EyeOff } from "lucide-react";
 import { Control, FieldValues, Path, PathValue } from "react-hook-form";
 
@@ -17,6 +17,8 @@ type TCustomFormInput<T extends FieldValues> = {
     control: Control<T>;
     required?: boolean;
     min?: number;
+    icon?: React.ReactNode; // Custom icon prop
+    iconPosition?: "start" | "end"; // Icon position (start or end)
 };
 
 const CustomFormInput = <T extends FieldValues>({
@@ -30,6 +32,8 @@ const CustomFormInput = <T extends FieldValues>({
     defaultValue,
     required,
     min,
+    icon,
+    iconPosition = "end", // Default to end
 }: TCustomFormInput<T>) => {
     const [show, setShow] = useState(false);
 
@@ -43,9 +47,10 @@ const CustomFormInput = <T extends FieldValues>({
             defaultValue={defaultValue}
             render={({ field, fieldState: { error } }) => (
                 <FormItem className="space-y-1">
-                    <FormLabel className="text-[20px]  leading-[32px] text-dark-500">{label}</FormLabel>
+                    <FormLabel className="text-[20px] leading-[32px] text-dark-500">{label}</FormLabel>
                     <FormControl>
                         <div className="relative pt-[10px] pb-[10px]">
+                            {/* Input Field */}
                             <Input
                                 placeholder={placeholder}
                                 type={(type === "password" ? (show ? "text" : "password") : type) || "text"}
@@ -55,8 +60,20 @@ const CustomFormInput = <T extends FieldValues>({
                                     field.onChange(type === "number" ? Number(e.target.value) : e.target.value)
                                 }
                                 disabled={disabled}
-                                min={min} 
+                                min={min}
+                                className={`pl-${icon && iconPosition === "start" ? "[50px]" : "4"} pr-${
+                                    type === "password" || (icon && iconPosition === "end") ? "10" : "4"
+                                }`}                                
                             />
+
+                            {/* Icon: Start Position */}
+                            {icon && iconPosition === "start" && (
+                                <div className="absolute inset-y-0 left-3 flex items-center cursor-pointer ">
+                                    {icon}
+                                </div>
+                            )}
+
+                            {/* Password Toggle Icon */}
                             {type === "password" &&
                                 (show ? (
                                     <Eye
@@ -71,6 +88,13 @@ const CustomFormInput = <T extends FieldValues>({
                                         size={16}
                                     />
                                 ))}
+
+                            {/* Icon: End Position */}
+                            {icon && iconPosition === "end" && type !== "password" && (
+                                <div className="absolute inset-y-0 right-3 cursor-pointer flex items-center ">
+                                    {icon}
+                                </div>
+                            )}
                         </div>
                     </FormControl>
                     {description && <FormDescription>{description}</FormDescription>}

@@ -13,6 +13,7 @@ body {
     .center {
         @apply flex items-center justify-center text-center;
     }
+    
 }
 
 @layer base {
@@ -20,10 +21,10 @@ body {
         --radius: 0.5rem;
     }
     h1 {
-        @apply md:text-[56px] leading-[72px] pb-[16px] text-[32px] font-semibold  text-dark-500 sm:leading-[52px]  md:leading-[62px];
+        @apply md:text-[56px] leading-[35px] pb-[16px] text-[32px] font-semibold  text-dark-500 md:leading-[62px];
     }
     h2 {
-        @apply text-5xl font-bold;
+        @apply text-[24px] md:text-[35px] lg:text-5xl font-semibold text-dark-500 ;
     }
     h3 {
         @apply text-[38px] font-bold leading-[52px];
@@ -31,4 +32,5 @@ body {
     h4 {
         @apply text-3xl font-bold;
     }
+
 }

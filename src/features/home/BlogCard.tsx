@@ -21,15 +21,15 @@ export function BlogCard({ post }: BlogCardProps) {
                         width={384}
                     />
                 </div>
-                <CardHeader>
-                    <div className="rounded-full px-3 py-1 text-[16px] font-semibold text-[#838383]">
+                <CardHeader className="px-0">
+                    <div className="rounded-full py-1 text-[16px] font-semibold text-[#838383]">
                         {post.category}
                     </div>
                     <CardTitle className="line-clamp-2 cursor-pointer text-[20px] font-semibold hover:text-primary">
                         {post.title}
                     </CardTitle>
                 </CardHeader>
-                <CardContent className="flex-grow">
+                <CardContent className="flex-grow p-0">
                     <div className="text-muted-foreground flex justify-between text-sm">
                         <div className="flex items-center text-[16px] text-[#838383]">{post.author}</div>
                         <div className="flex items-center text-[16px] text-[#838383]">{post.date}</div>
