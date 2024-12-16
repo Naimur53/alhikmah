@@ -1,12 +1,12 @@
 import React from "react";
 
-import { FaFacebookF, FaInstagram, FaPinterestP, FaWhatsapp } from "react-icons/fa";
+import { FacebookIcon, InstagramIcon, LinkedinIcon, TwitterIcon } from "lucide-react";
 
 const socialLinks = [
-    { icon: <FaFacebookF />, href: "#", label: "Facebook" },
-    { icon: <FaInstagram />, href: "#", label: "Instagram" },
-    { icon: <FaPinterestP />, href: "#", label: "Pinterest" },
-    { icon: <FaWhatsapp />, href: "#", label: "WhatsApp" },
+    { icon: <FacebookIcon />, href: "#", label: "Facebook" },
+    { icon: <InstagramIcon />, href: "#", label: "Instagram" },
+    { icon: <LinkedinIcon />, href: "#", label: "Linkedin" },
+    { icon: <TwitterIcon />, href: "#", label: "Twitter" },
 ];
 
 const SocialLinks = () => {

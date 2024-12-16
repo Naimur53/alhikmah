@@ -5,6 +5,7 @@ import { useState } from "react";
 import { navLinks } from "@/data/navLinks";
 import { Menu } from "lucide-react";
 
+import Logo from "@/components/shared/Logo";
 import { NavLink } from "@/components/shared/NavLink";
 
 export function Navbar() {
@@ -15,9 +16,8 @@ export function Navbar() {
             <div className="flex h-16 items-center justify-between">
                 {/* Logo and Desktop Navigation */}
 
-                <div className="flex-shrink-0">
-                    <span className="text-[28px] text-[#838383]">আল হিকমাহ</span>
-                </div>
+                <Logo />
+
                 <div className="ml-10 hidden md:block">
                     <div className="flex space-x-4">
                         {navLinks.map((link) => (
