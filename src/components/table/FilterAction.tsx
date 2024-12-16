@@ -35,6 +35,7 @@ export const FilterAction = ({ filters, appliedFilter, onFilterChange, clearFilt
                     Clear <X className="size-4 xl:size-5" />
                 </Button>
             )}
+
             {filters.map((filter, index) => (
                 <CustomPopover
                     key={index}
@@ -56,7 +57,7 @@ export const FilterAction = ({ filters, appliedFilter, onFilterChange, clearFilt
                 >
                     <div className="">
                         {filter?.options?.length === 0 && (
-                            <div className="text-muted-foreground flex min-h-20 w-full items-center justify-center px-4 text-center text-sm">
+                            <div className="flex min-h-20 w-full items-center justify-center px-4 text-center text-sm text-muted-foreground">
                                 {filter.emptyOptionText || "No options available"}
                             </div>
                         )}
@@ -72,7 +73,7 @@ export const FilterAction = ({ filters, appliedFilter, onFilterChange, clearFilt
                                     onFilterChange(filter.filterKey, newOption);
                                 }}
                                 key={option.value}
-                                className="hover:bg-accent flex cursor-pointer items-center gap-2 rounded px-2.5 py-2"
+                                className="flex cursor-pointer items-center gap-2 rounded px-2.5 py-2 hover:bg-accent"
                             >
                                 <Checkbox
                                     checked={

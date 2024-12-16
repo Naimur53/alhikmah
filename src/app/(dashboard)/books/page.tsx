@@ -28,18 +28,14 @@ const Page = () => {
         refetch,
     } = useTable<Book>({
         useQueryHook: useGetBooksQuery,
-        keys: ["state", "difficulty", "search", "page", "page_size", "section", "module"],
+        keys: ["search", "page", "page_size"],
         mode: "queryParams",
     });
 
     const queryProps = {
-        state: appliedFilters.find((filter) => filter.key === "state")?.value || "",
-        difficulty: appliedFilters.find((filter) => filter.key === "difficulty")?.value || "",
         search: appliedFilters.find((filter) => filter.key === "search")?.value || "",
         page: parseInt(appliedFilters.find((filter) => filter.key === "page")?.value || "1"),
         pageSize: parseInt(appliedFilters.find((filter) => filter.key === "page_size")?.value || "10"),
-        section: appliedFilters.find((filter) => filter.key === "section")?.value || "",
-        module: appliedFilters.find((filter) => filter.key === "module")?.value || "",
     };
 
     if (isLoading) {
@@ -64,7 +60,7 @@ const Page = () => {
             appliedFilter={appliedFilters}
             onFilterChange={onFilterChange}
             clearFilter={clearFilter}
-            onCreatePress={() => {}}
+            onCreatePress={() => router.push("/add-book")}
             refetch={refetch}
         />
     );

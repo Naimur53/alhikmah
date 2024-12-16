@@ -1,6 +1,6 @@
 import React from "react";
 
-import { InfoIcon, LayoutDashboardIcon, TableOfContentsIcon, UserIcon } from "lucide-react";
+import { HeartIcon, InfoIcon, LayoutDashboardIcon, TableOfContentsIcon, UserIcon } from "lucide-react";
 
 import { NavItem } from "@/components/shared/NavItem";
 
@@ -9,6 +9,7 @@ export type SidebarNavItemsType = {
     icon: React.JSX.Element;
     url: string;
     subItems?: { label: string; url: string }[];
+    subLinks?: { url: string }[];
 };
 
 const navItems: SidebarNavItemsType[] = [
@@ -21,11 +22,13 @@ const navItems: SidebarNavItemsType[] = [
         title: "লেখক",
         url: "/authors",
         icon: <UserIcon />,
+        subLinks: [{ url: "/add-author" }],
     },
     {
         title: "প্রকাশনী",
         url: "/publishers",
         icon: <TableOfContentsIcon />,
+        subLinks: [{ url: "/add-publisher" }],
     },
     {
         title: "ব্লগ সমূহ",
@@ -33,9 +36,15 @@ const navItems: SidebarNavItemsType[] = [
         icon: <TableOfContentsIcon />,
     },
     {
+        title: "উইশলিস্ট",
+        url: "/wishlist",
+        icon: <HeartIcon />,
+    },
+    {
         title: "বই",
         url: "/books",
         icon: <InfoIcon />,
+        subLinks: [{ url: "/add-book" }],
     },
 ];
 

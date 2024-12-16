@@ -27,7 +27,9 @@ export const NavItem = ({ navItem }: { navItem: SidebarNavItemsType }) => {
         return children;
     };
 
-    const [isOpen, setIsOpen] = useState(pathname.startsWith(navItem.url));
+    const isActive =
+        pathname.startsWith(navItem.url) || navItem.subLinks?.some((link) => pathname.startsWith(link.url));
+    const [isOpen, setIsOpen] = useState(isActive);
 
     return (
         <Collapsible
@@ -40,7 +42,7 @@ export const NavItem = ({ navItem }: { navItem: SidebarNavItemsType }) => {
                     <Wrapper>
                         <button
                             className={`flex w-full cursor-pointer items-center justify-between gap-2 rounded-sm px-4 py-2.5 ${
-                                pathname.startsWith(navItem.url) ? "bg-primary text-white" : "hover:bg-accent"
+                                isActive ? "bg-primary text-white" : "hover:bg-accent"
                             } active:bg-primary active:text-white`}
                         >
                             <NavItemTitle title={navItem.title} icon={navItem.icon} />
@@ -67,7 +69,7 @@ export const NavItem = ({ navItem }: { navItem: SidebarNavItemsType }) => {
                         <Link
                             href={subItem.url}
                             key={index}
-                            className={`hover:bg-accent block cursor-pointer rounded-br-sm rounded-tr-sm border-l-4 px-4 py-2 text-sm font-medium ${pathname.startsWith(subItem.url) ? "border-l-primary text-primary" : "border-l-transparent"}`}
+                            className={`block cursor-pointer rounded-br-sm rounded-tr-sm border-l-4 px-4 py-2 text-sm font-medium hover:bg-accent ${pathname.startsWith(subItem.url) ? "border-l-primary text-primary" : "border-l-transparent"}`}
                         >
                             {subItem.label}
                         </Link>

@@ -1,59 +1,59 @@
-import { Book } from "@/features/types";
+import { Wishlist } from "@/features/types";
 import { api } from "@/redux/api";
 import { METHOD, TagType } from "@/redux/types";
 import { PaginatedResponse, QueryParams } from "@/types";
 
-export const bookApi = api.injectEndpoints({
+export const wishlistApi = api.injectEndpoints({
     endpoints: (builder) => ({
-        getBooks: builder.query<PaginatedResponse<Book>, QueryParams>({
+        getWishlist: builder.query<PaginatedResponse<Wishlist>, QueryParams>({
             query: (query) => ({
-                url: `/book`,
+                url: `/wishlist`,
                 method: METHOD.GET,
                 params: query,
             }),
-            providesTags: [TagType.Book],
+            providesTags: [TagType.Wishlist],
         }),
-        getBookById: builder.query({
+        getWishlistById: builder.query({
             query: (id) => ({
-                url: `/book/${id}`,
+                url: `/wishlist/${id}`,
                 method: METHOD.GET,
             }),
-            providesTags: [TagType.Book],
+            providesTags: [TagType.Wishlist],
         }),
-        addBook: builder.mutation({
+        addWishlist: builder.mutation({
             query: (info) => ({
-                url: "/book",
+                url: "/wishlist",
                 method: METHOD.POST,
                 body: info,
             }),
             invalidatesTags: [TagType.Book],
         }),
-        editBook: builder.mutation({
+        editWishlist: builder.mutation({
             query: (info) => ({
-                url: `/book/${info._id}`,
+                url: `/wishlist/${info._id}`,
                 method: METHOD.PATCH,
                 body: info,
             }),
             invalidatesTags: [TagType.Book],
         }),
-        deleteBook: builder.mutation({
+        deleteWishlist: builder.mutation({
             query: (id) => ({
-                url: `/book/${id}`,
+                url: `/wishlist/${id}`,
                 method: METHOD.DELETE,
             }),
-            invalidatesTags: [TagType.Book],
+            invalidatesTags: [TagType.Wishlist],
         }),
-        bulkDeleteBooks: builder.mutation({
+        bulkDeleteWishlist: builder.mutation({
             query: (ids) => ({
-                url: `/book/bulk-delete`,
+                url: `/wishlist/bulk-delete`,
                 method: METHOD.DELETE,
                 body: ids,
             }),
             invalidatesTags: [TagType.Book],
         }),
-        bulkUpdateBooks: builder.mutation({
+        bulkUpdateWishlist: builder.mutation({
             query: (info) => ({
-                url: `/book/bulk-update`,
+                url: `/wishlist/bulk-update`,
                 method: METHOD.PATCH,
                 body: info,
             }),
@@ -63,11 +63,11 @@ export const bookApi = api.injectEndpoints({
 });
 
 export const {
-    useGetBooksQuery,
-    useAddBookMutation,
-    useDeleteBookMutation,
-    useEditBookMutation,
-    useGetBookByIdQuery,
-    useBulkDeleteBooksMutation,
-    useBulkUpdateBooksMutation,
-} = bookApi;
+    useGetWishlistQuery,
+    useAddWishlistMutation,
+    useDeleteWishlistMutation,
+    useEditWishlistMutation,
+    useGetWishlistByIdQuery,
+    useBulkDeleteWishlistMutation,
+    useBulkUpdateWishlistMutation,
+} = wishlistApi;

@@ -5,7 +5,7 @@ export const blogApi = api.injectEndpoints({
     endpoints: (builder) => ({
         getBlogs: builder.query({
             query: (query) => ({
-                url: `/blogs?${query}`,
+                url: `/blog?${query}`,
                 method: METHOD.GET,
                 params: query,
             }),
@@ -13,14 +13,14 @@ export const blogApi = api.injectEndpoints({
         }),
         getBlogById: builder.query({
             query: (id) => ({
-                url: `/blogs/${id}`,
+                url: `/blog/${id}`,
                 method: METHOD.GET,
             }),
             providesTags: [TagType.Blog],
         }),
         addBlog: builder.mutation({
             query: (info) => ({
-                url: "/blogs",
+                url: "/blog",
                 method: METHOD.POST,
                 body: info,
             }),
@@ -28,7 +28,7 @@ export const blogApi = api.injectEndpoints({
         }),
         editBlog: builder.mutation({
             query: (info) => ({
-                url: `/blogs/${info._id}`,
+                url: `/blog/${info._id}`,
                 method: METHOD.PATCH,
                 body: info,
             }),
@@ -36,14 +36,14 @@ export const blogApi = api.injectEndpoints({
         }),
         deleteBlog: builder.mutation({
             query: (id) => ({
-                url: `/blogs/${id}`,
+                url: `/blog/${id}`,
                 method: METHOD.DELETE,
             }),
             invalidatesTags: [TagType.Blog],
         }),
         bulkDeleteBlogs: builder.mutation({
             query: (ids) => ({
-                url: `/blogs/bulk-delete`,
+                url: `/blog/bulk-delete`,
                 method: METHOD.DELETE,
                 body: ids,
             }),
@@ -51,7 +51,7 @@ export const blogApi = api.injectEndpoints({
         }),
         bulkUpdateBlogs: builder.mutation({
             query: (info) => ({
-                url: `/blogs/bulk-update`,
+                url: `/blog/bulk-update`,
                 method: METHOD.PATCH,
                 body: info,
             }),

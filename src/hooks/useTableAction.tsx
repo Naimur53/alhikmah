@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Book, SingleAuthor } from "@/features/types";
+import { Book, SingleAuthor, Wishlist } from "@/features/types";
 import { AlertType } from "@/providers/AlertProvider";
 import { TypedMutationTrigger } from "@reduxjs/toolkit/query/react";
 import { toast } from "sonner";
@@ -7,8 +7,8 @@ import { toast } from "sonner";
 import { useAlert } from "@/hooks/useAlert";
 
 const useTableAction = (
-    entityName: "Question" | "Author" | "Book",
-    selectedRows: SingleAuthor[] | Book[],
+    entityName: "Question" | "Author" | "Book" | "Wishlist",
+    selectedRows: SingleAuthor[] | Book[] | Wishlist[],
     selectRows: (rows: []) => void,
     bulkDelete: TypedMutationTrigger<any, any, any>,
     bulkUpdate: TypedMutationTrigger<any, any, any>

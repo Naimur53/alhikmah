@@ -7,7 +7,7 @@ export const publisherApi = api.injectEndpoints({
     endpoints: (builder) => ({
         getPublishers: builder.query<PaginatedResponse<Publisher>, QueryParams>({
             query: (query) => ({
-                url: `/publishers`,
+                url: `/publisher`,
                 method: METHOD.GET,
                 params: query,
             }),
@@ -15,14 +15,14 @@ export const publisherApi = api.injectEndpoints({
         }),
         getPublisherById: builder.query<Publisher, string>({
             query: (id) => ({
-                url: `/publishers/${id}`,
+                url: `/publisher/${id}`,
                 method: METHOD.GET,
             }),
             providesTags: [TagType.Publisher],
         }),
         addPublisher: builder.mutation<Publisher, Publisher>({
             query: (info) => ({
-                url: "/publishers",
+                url: "/publisher",
                 method: METHOD.POST,
                 body: info,
             }),
@@ -30,7 +30,7 @@ export const publisherApi = api.injectEndpoints({
         }),
         editPublisher: builder.mutation<void, Publisher>({
             query: (info) => ({
-                url: `/publishers/${info.id}`,
+                url: `/publisher/${info.id}`,
                 method: METHOD.PATCH,
                 body: info,
             }),
@@ -38,14 +38,14 @@ export const publisherApi = api.injectEndpoints({
         }),
         deletePublisher: builder.mutation<Publisher, string>({
             query: (id) => ({
-                url: `/publishers/${id}`,
+                url: `/publisher/${id}`,
                 method: METHOD.DELETE,
             }),
             invalidatesTags: [TagType.Publisher],
         }),
         bulkDeletePublishers: builder.mutation<Publisher, string[]>({
             query: (ids) => ({
-                url: `/publishers/bulk-delete`,
+                url: `/publisher/bulk-delete`,
                 method: METHOD.DELETE,
                 body: ids,
             }),
@@ -53,7 +53,7 @@ export const publisherApi = api.injectEndpoints({
         }),
         bulkUpdatePublishers: builder.mutation<Publisher, Publisher[]>({
             query: (info) => ({
-                url: `/publishers/bulk-update`,
+                url: `/publisher/bulk-update`,
                 method: METHOD.PATCH,
                 body: info,
             }),

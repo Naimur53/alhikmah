@@ -3,13 +3,13 @@
 import { useState } from "react";
 
 import { defaultDifficultyFilter, defaultStateFilter, defaultTableActions } from "@/data/constants";
-import { Blog } from "@/features/types";
+import { Wishlist } from "@/features/types";
 import { AlertType } from "@/providers/AlertProvider";
 import {
-    useBulkDeleteBlogsMutation,
-    useBulkUpdateBlogsMutation,
-    useDeleteBlogMutation,
-} from "@/redux/features/blogs/blog-api";
+    useBulkDeleteWishlistMutation,
+    useBulkUpdateWishlistMutation,
+    useDeleteWishlistMutation,
+} from "@/redux/features/wishlists/wishlist-api";
 import { GenericTableProps } from "@/types";
 import { ColumnDef } from "@tanstack/react-table";
 import { toast } from "sonner";
@@ -27,17 +27,17 @@ type QueryProps = {
     pageSize: number;
 };
 
-type Props = GenericTableProps<Blog, QueryProps> & {
+type Props = GenericTableProps<Wishlist, QueryProps> & {
     hiddenFilters?: string[];
     checkboxType?: "radio" | "checkbox";
-    selectedRows?: Blog[];
-    onRowSelectionChange?: (passages: Blog[]) => void;
+    selectedRows?: Wishlist[];
+    onRowSelectionChange?: (passages: Wishlist[]) => void;
     isOnDialog?: boolean;
 };
 
-const BlogsTable = (props: Props) => {
+const WishlistsTable = (props: Props) => {
     const {
-        data: blogs,
+        data: wishlists,
         queryProps,
         onPageChange,
         onPageSizeChange,
@@ -51,23 +51,22 @@ const BlogsTable = (props: Props) => {
         onRowSelectionChange,
         isOnDialog,
     } = props;
-
-    const [deleteBlog, { isLoading: isDeleting }] = useDeleteBlogMutation();
-    const [bulkUpdateBlogs] = useBulkUpdateBlogsMutation();
-    const [bulkDeleteBlogs] = useBulkDeleteBlogsMutation();
-    const [deletingBlogIds, setDeletingBlogIds] = useState<number[]>([]);
+    const [deleteWishlist, { isLoading: isDeleting }] = useDeleteWishlistMutation();
+    const [bulkUpdateWishlist] = useBulkUpdateWishlistMutation();
+    const [bulkDeleteWishlist] = useBulkDeleteWishlistMutation();
+    const [deletingWishlistIds, setDeletingWishlistIds] = useState<number[]>([]);
 
     const { fire } = useAlert();
     const tableFilters = [defaultStateFilter, defaultDifficultyFilter];
 
-    const [selectedRows, setSelectedRows] = useState<Blog[]>([]);
+    const [selectedRows, setSelectedRows] = useState<Wishlist[]>([]);
 
-    const selectRows = (rows: Blog[]) => {
+    const selectRows = (rows: Wishlist[]) => {
         setSelectedRows(rows);
         // onRowSelectionChange?.(rows);
     };
 
-    const columns: ColumnDef<Blog>[] = [
+    const columns: ColumnDef<Wishlist>[] = [
         {
             id: "select",
             header: () => {
@@ -78,12 +77,12 @@ const BlogsTable = (props: Props) => {
                 return (
                     <Checkbox
                         checked={
-                            (selectedRows.length === blogs.count && blogs.count !== 0) ||
+                            (selectedRows.length === wishlists.data.length && wishlists.data.length !== 0) ||
                             (selectedRows.length > 0 && "indeterminate")
                         }
                         onCheckedChange={(value) => {
                             if (value) {
-                                selectRows(blogs.data);
+                                selectRows(wishlists.data);
                             } else {
                                 selectRows([]);
                             }
@@ -155,10 +154,10 @@ const BlogsTable = (props: Props) => {
                                 text: "This action cannot be undone. This will permanently delete passage from the servers.",
                                 type: AlertType.ERROR,
                                 onConfirm: async () => {
-                                    setDeletingBlogIds([...deletingBlogIds, row.original.id]);
-                                    const response = await deleteBlog(row.original.id);
+                                    setDeletingWishlistIds([...deletingWishlistIds, row.original.id]);
+                                    const response = await deleteWishlist(row.original.id);
 
-                                    setDeletingBlogIds(deletingBlogIds.filter((id) => id !== row.original.id));
+                                    setDeletingWishlistIds(deletingWishlistIds.filter((id) => id !== row.original.id));
 
                                     if (response.error && "data" in response.error) {
                                         const errorData = response.error.data as { detail?: string };
@@ -178,20 +177,26 @@ const BlogsTable = (props: Props) => {
                                 },
                             });
                         }}
-                        isDeleting={isDeleting && deletingBlogIds.includes(row.original.id)}
+                        isDeleting={isDeleting && deletingWishlistIds.includes(row.original.id)}
                     />
                 );
             },
         },
     ];
 
-    const { handleTableAction } = useTableAction("Author", selectedRows, selectRows, bulkDeleteBlogs, bulkUpdateBlogs);
+    const { handleTableAction } = useTableAction(
+        "Wishlist",
+        selectedRows,
+        selectRows,
+        bulkDeleteWishlist,
+        bulkUpdateWishlist
+    );
 
     return (
         <DataTable
-            name={"ব্লগ"}
+            name={"Wishlist"}
             columns={columns}
-            data={blogs.data}
+            data={wishlists.data}
             selectedRowsCount={selectedRows.length}
             actions={defaultTableActions}
             onAction={handleTableAction}
@@ -200,7 +205,7 @@ const BlogsTable = (props: Props) => {
             filters={tableFilters}
             onFilterChange={onFilterChange}
             clearFilter={clearFilter}
-            count={blogs.count}
+            count={wishlists.count}
             onCreatePress={onCreatePress}
             page={queryProps.page}
             pageSize={queryProps.pageSize}
@@ -211,4 +216,4 @@ const BlogsTable = (props: Props) => {
     );
 };
 
-export default BlogsTable;
+export default WishlistsTable;

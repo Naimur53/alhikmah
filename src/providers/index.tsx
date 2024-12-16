@@ -2,6 +2,7 @@
 
 import React from "react";
 
+import { AlertProvider } from "@/providers/AlertProvider";
 import { store } from "@/redux/store";
 import { Provider } from "react-redux";
 
@@ -11,10 +12,12 @@ import { Toaster } from "@/components/ui/sonner";
 export const Providers = ({ children }: { children: React.ReactNode }) => {
     return (
         <Provider store={store}>
-            <ReactLenis root>
-                <Toaster position="top-right" />
-                {children}
-            </ReactLenis>
+            <AlertProvider>
+                <ReactLenis root>
+                    <Toaster position="top-right" />
+                    {children}
+                </ReactLenis>
+            </AlertProvider>
         </Provider>
     );
 };

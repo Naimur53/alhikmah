@@ -22,13 +22,9 @@ import { DataTable } from "@/components/table/DataTable";
 import { RowActions } from "@/components/table/RowActions";
 
 type QueryProps = {
-    state: string;
-    difficulty: string;
     search: string;
     page: number;
     pageSize: number;
-    section: string;
-    module: string;
 };
 
 type Props = GenericTableProps<Book, QueryProps> & {
@@ -81,12 +77,12 @@ const BooksTable = (props: Props) => {
                 return (
                     <Checkbox
                         checked={
-                            (selectedRows.length === books.results.length && books.results.length !== 0) ||
+                            (selectedRows.length === books.count && books.count !== 0) ||
                             (selectedRows.length > 0 && "indeterminate")
                         }
                         onCheckedChange={(value) => {
                             if (value) {
-                                selectRows(books.results);
+                                selectRows(books.data);
                             } else {
                                 selectRows([]);
                             }
@@ -194,7 +190,7 @@ const BooksTable = (props: Props) => {
         <DataTable
             name={"Book"}
             columns={columns}
-            data={books.results}
+            data={books.data}
             selectedRowsCount={selectedRows.length}
             actions={defaultTableActions}
             onAction={handleTableAction}

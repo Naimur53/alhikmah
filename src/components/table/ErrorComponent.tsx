@@ -10,7 +10,7 @@ type Props = {
 
 export const ErrorComponent = ({ title, message, onRetry }: Props) => {
     return (
-        <div className="center h-[50vh]">
+        <div className="center h-[70vh]">
             <div className="flex flex-col items-center gap-6">
                 <InfoIcon className="size-[120px] max-md:size-[100px]" />
                 <div>

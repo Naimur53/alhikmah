@@ -37,7 +37,7 @@ export type GenericTableProps<TData, TQuery> = {
     }[];
     onFilterChange: (key: string, value: string | number) => void;
     clearFilter: () => void;
-    onCreatePress: () => void;
+    onCreatePress?: () => void;
     refetch: () => void;
 };
 

@@ -10,6 +10,7 @@ export enum TagType {
     Blog = "Blog",
     Publisher = "Publisher",
     Dashboard = "Dashboard",
+    Wishlist = "Wishlist",
 }
 
 export const tagTypes = Object.values(TagType);

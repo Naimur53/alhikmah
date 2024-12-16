@@ -4,10 +4,10 @@ import { useRouter } from "next/navigation";
 
 import { FileUploadComponent } from "@/features/dashboard/FileUploadComponent";
 import { MediaType } from "@/features/types";
-import { useAddAuthorMutation } from "@/redux/features/author/author-api";
+import { useAddPublisherMutation } from "@/redux/features/publishers/publisher-api";
 import { useAppDispatch } from "@/redux/hook";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Backpack, ChevronLeft, XIcon } from "lucide-react";
+import { ChevronLeft } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { z } from "zod";
@@ -17,28 +17,28 @@ import { Form } from "@/components/ui/form";
 import CustomFormInput from "@/components/custom-ui/CustomFormInput";
 
 const formSchema = z.object({
-    email: z.string().min(1, { message: "Email is required" }).email({ message: "Invalid email address" }),
+    name: z.string().min(1, { message: "Name is required" }),
 });
 
-const AddAuthorPage = () => {
+const AddPublisherPage = () => {
     const router = useRouter();
     const dispatch = useAppDispatch();
 
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
-            email: "",
+            name: "",
         },
     });
 
-    const [addAuthor, { isLoading }] = useAddAuthorMutation();
+    const [addPublisher, { isLoading }] = useAddPublisherMutation();
 
     const uploadMedia = (file: File, type: MediaType) => {
         console.log(file, type);
     };
 
     const onSubmit = (data: z.infer<typeof formSchema>) => {
-        addAuthor({
+        addPublisher({
             ...data,
             id: 0,
             name: "",
@@ -62,20 +62,14 @@ const AddAuthorPage = () => {
                 <div className="flex items-center gap-4 2xl:pb-6">
                     <button
                         onClick={() => router.back()}
-                        className="center rounded-full border border-muted-foreground p-2 hover:bg-muted"
+                        className="center rounded-full border border-muted-foreground p-1.5 hover:bg-muted"
                     >
                         <ChevronLeft className="size-6" />
                     </button>
-                    <h3 className="text-2xl text-secondary-foreground 2xl:text-3xl">লেখক যোগ করুন</h3>
+                    <h3 className="text-2xl text-secondary-foreground 2xl:text-2xl">প্রকাশক যোগ করুন</h3>
                 </div>
                 <div className="w-8/12 space-y-4 rounded-xl border bg-white p-8">
-                    <CustomFormInput
-                        label="Email"
-                        name="email"
-                        placeholder="Email"
-                        control={form.control}
-                        type="email"
-                    />
+                    <CustomFormInput label="Name" name="name" placeholder="Name" control={form.control} type="text" />
 
                     <FileUploadComponent
                         type={MediaType.IMAGE}
@@ -85,7 +79,7 @@ const AddAuthorPage = () => {
                     />
 
                     <Button type="submit" className="w-full" isLoading={isLoading} disabled={isLoading}>
-                        Add Author
+                        Add Publisher
                     </Button>
                 </div>
             </form>
@@ -93,4 +87,4 @@ const AddAuthorPage = () => {
     );
 };
 
-export default AddAuthorPage;
+export default AddPublisherPage;

@@ -2,9 +2,9 @@
 
 import { useRouter } from "next/navigation";
 
-import AuthorTable from "@/features/authors/AuthorTable";
-import { SingleAuthor } from "@/features/types";
-import { useGetAuthorsQuery } from "@/redux/features/author/author-api";
+import { Wishlist } from "@/features/types";
+import WishlistsTable from "@/features/wishlists/WishlistsTable";
+import { useGetWishlistQuery } from "@/redux/features/wishlists/wishlist-api";
 import { useAppDispatch } from "@/redux/hook";
 
 import { useTable } from "@/hooks/useTable";
@@ -26,9 +26,9 @@ const Page = () => {
         onSearch,
         appliedFilters,
         refetch,
-    } = useTable<SingleAuthor>({
-        useQueryHook: useGetAuthorsQuery,
-        keys: ["search", "page", "page_size"],
+    } = useTable<Wishlist>({
+        useQueryHook: useGetWishlistQuery,
+        keys: ["state", "difficulty", "search", "page", "page_size", "section", "module"],
         mode: "queryParams",
     });
 
@@ -51,7 +51,7 @@ const Page = () => {
     }
 
     return (
-        <AuthorTable
+        <WishlistsTable
             data={data}
             queryProps={queryProps}
             onPageChange={onPageChange}
@@ -60,7 +60,6 @@ const Page = () => {
             appliedFilter={appliedFilters}
             onFilterChange={onFilterChange}
             clearFilter={clearFilter}
-            onCreatePress={() => router.push("/add-author")}
             refetch={refetch}
         />
     );

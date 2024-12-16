@@ -17,7 +17,7 @@ const buttonVariants = cva(
                 default:
                     "bg-primary border border-primary text-white hover:bg-primary-hover hover:border-primary-hover active:bg-primary-click active:border-primary-click",
                 secondary:
-                    "border hover:border-secondary text-secondary bg-white hover:bg-secondary-hover hover:text-secondary active:outline-secondary active:outline-[1px] disabled:bg-muted disabled:text-muted-foreground border-[#B6C1D1]",
+                    "border hover:border-secondary text-secondary-foreground bg-white hover:bg-secondary-hover hover:text-secondary-foreground active:outline-secondary active:outline-[1px] disabled:bg-muted disabled:text-muted-foreground border-[#B6C1D1]",
                 ghost: "text-secondary bg-transparent hover:text-secondary-foreground active:text-secondary-foreground",
                 tertiary: `bg-transparent text-primary hover:text-primary-hover active:text-primary-click disabled:text-muted-foreground disabled:cursor-no-drop rounded-none
                             border-b-[1px] border-b-transparent hover:border-b-[1px] hover:border-primary-hover active:border-b-[1px] active:border-primary-click`,

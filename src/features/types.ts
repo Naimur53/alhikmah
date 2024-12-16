@@ -24,6 +24,12 @@ export type Book = {
     image: string;
 };
 
+export type Wishlist = {
+    id: number;
+    book_id: number;
+    user_id: number;
+};
+
 export enum MediaType {
     IMAGE = "image",
     AUDIO = "audio",

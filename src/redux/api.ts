@@ -1,3 +1,4 @@
+import { config } from "@/config";
 import { METHOD, RootState, tagTypes } from "@/redux/types";
 import {
     BaseQueryFn,
@@ -13,7 +14,7 @@ export const API_BASE_URL = process.env.NEXT_PUBLIC_REST_API_ENDPOINT;
 export const API_TIMEOUT = 60_000;
 
 export const baseQuery = fetchBaseQuery({
-    baseUrl: API_BASE_URL,
+    baseUrl: config.baseUrl,
     timeout: API_TIMEOUT,
     prepareHeaders: (headers, { getState }) => {
         const token = (getState() as RootState).auth.accessToken;

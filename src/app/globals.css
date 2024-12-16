@@ -132,20 +132,17 @@ body {
 }
 
 @layer base {
-    :root {
-        --radius: 0.5rem;
-    }
     h1 {
-        @apply text-foreground pb-[16px] text-[32px] font-semibold leading-[35px] md:text-[56px] md:leading-[62px];
+        @apply pb-[16px] text-[32px] font-semibold leading-[35px] text-foreground md:text-[56px] md:leading-[62px];
     }
     h2 {
-        @apply text-foreground text-[24px] font-semibold md:text-[35px] lg:text-5xl;
+        @apply text-[24px] font-semibold text-foreground md:text-[35px] lg:text-5xl;
     }
     h3 {
         @apply text-[38px] font-bold leading-[52px];
     }
     h4 {
-        @apply text-foreground text-3xl font-bold;
+        @apply text-3xl font-bold text-foreground;
     }
 }
 

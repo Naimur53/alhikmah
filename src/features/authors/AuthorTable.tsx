@@ -22,13 +22,9 @@ import { DataTable } from "@/components/table/DataTable";
 import { RowActions } from "@/components/table/RowActions";
 
 type QueryProps = {
-    state: string;
-    difficulty: string;
     search: string;
     page: number;
     pageSize: number;
-    section: string;
-    module: string;
 };
 
 type Props = GenericTableProps<SingleAuthor, QueryProps> & {
@@ -81,12 +77,12 @@ const AuthorTable = (props: Props) => {
                 return (
                     <Checkbox
                         checked={
-                            (selectedRows.length === authors.results.length && authors.results.length !== 0) ||
+                            (selectedRows.length === authors.count && authors.count !== 0) ||
                             (selectedRows.length > 0 && "indeterminate")
                         }
                         onCheckedChange={(value) => {
                             if (value) {
-                                selectRows(authors.results);
+                                selectRows(authors.data);
                             } else {
                                 selectRows([]);
                             }
@@ -198,9 +194,9 @@ const AuthorTable = (props: Props) => {
 
     return (
         <DataTable
-            name={"Author"}
+            name={"লেখক"}
             columns={columns}
-            data={authors.results}
+            data={authors.data}
             selectedRowsCount={selectedRows.length}
             actions={defaultTableActions}
             onAction={handleTableAction}

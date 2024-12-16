@@ -28,7 +28,7 @@ interface Props<TData, TValue> {
     onFilterChange: (key: string, value: string) => void;
     clearFilter: () => void;
 
-    onCreatePress: () => void;
+    onCreatePress?: () => void;
 
     count: number;
     page: number;
@@ -72,47 +72,27 @@ export const DataTable = <TData, TValue>({
 
     return (
         <>
-            {!isOnDialog && <h1 className="mb-3 text-2xl 2xl:mb-4">{name}</h1>}
+            {!isOnDialog && <h1 className="text-2xl text-secondary-foreground">{name}</h1>}
             <div
                 className={cn(
                     "rounded-md bg-white",
-                    isOnDialog ? "pb-4" : "px-6 pb-6 pt-2 shadow-[0px_0px_3px_0px_rgba(0,0,0,0.05)]"
+                    isOnDialog ? "pb-4" : "px-6 pb-4 pt-2 shadow-[0px_0px_3px_0px_rgba(0,0,0,0.05)]"
                 )}
             >
                 <div className={cn("sticky top-0 z-50 flex flex-col gap-4 bg-white", isOnDialog ? "pb-4" : "py-4")}>
                     {!isOnDialog && (
                         <div className="flex w-full items-center justify-between gap-4">
-                            <div className="flex items-center gap-4">
-                                {/* <CustomPopover
-                            openOnHover={true}
-                            className="w-40"
-                            trigger={
-                                <Button
-                                    size={"sm"}
-                                    variant="secondary"
-                                    className="lg:px-2.5"
-                                >
-                                    <Settings className="size-5 cursor-pointer text-icon" />
-                                </Button>
-                            }
-                        >
-                            <div className="w-full cursor-pointer rounded px-2 py-1.5 text-left text-xs font-light hover:bg-accent xl:text-sm">
-                                Full Screen
-                            </div>
-                            <div className="w-full cursor-pointer rounded px-2 py-1.5 text-left text-xs font-light hover:bg-accent xl:text-sm">
-                                Side Panel
-                            </div>
-                        </CustomPopover> */}
-                                <SearchBox
-                                    placeholder={`Search ${name}`}
-                                    onSearch={onSearch}
-                                    className="w-[25vw] bg-white py-2"
-                                />
-                            </div>
+                            <SearchBox
+                                placeholder={`Search on ${name}`}
+                                onSearch={onSearch}
+                                className="w-[25vw] bg-white py-2"
+                            />
 
-                            <Button size={"sm"} className="text-sm" onClick={onCreatePress}>
-                                <Plus size={20} /> Create New
-                            </Button>
+                            {onCreatePress && (
+                                <Button size={"sm"} className="text-sm" onClick={onCreatePress}>
+                                    <Plus size={20} /> যোগ করুন
+                                </Button>
+                            )}
                         </div>
                     )}
 

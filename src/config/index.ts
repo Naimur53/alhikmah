@@ -1,3 +1,3 @@
 export const config = {
-    baseUrl: process.env.NEXT_PUBLIC_URL,
+    baseUrl: process.env.NEXT_PUBLIC_SERVER_URL,
 };

@@ -7,6 +7,7 @@ import { MediaType } from "@/features/types";
 import { useAddAuthorMutation } from "@/redux/features/author/author-api";
 import { useAppDispatch } from "@/redux/hook";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { ChevronLeft } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { z } from "zod";
@@ -67,8 +68,17 @@ const AddBookPage = () => {
     return (
         <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)}>
-                <h1 className="pb-8 text-2xl text-primary 2xl:pb-10 2xl:text-3xl">বই যোগ করুন</h1>
-                <div className="space-y-4">
+                <div className="flex items-center gap-4 2xl:pb-6">
+                    <button
+                        onClick={() => router.back()}
+                        className="center rounded-full border border-muted-foreground p-1.5 hover:bg-muted"
+                    >
+                        <ChevronLeft className="size-6" />
+                    </button>
+                    <h3 className="text-xl text-secondary-foreground 2xl:text-2xl">বই যোগ করুন</h3>
+                </div>
+
+                <div className="space-y-4 rounded-xl border bg-white p-8">
                     <div className="col2">
                         <CustomFormInput
                             label="টাইটেল"

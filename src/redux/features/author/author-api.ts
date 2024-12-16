@@ -7,20 +7,20 @@ export const authorApi = api.injectEndpoints({
     endpoints: (builder) => ({
         getAuthors: builder.query<PaginatedResponse<SingleAuthor>, QueryParams>({
             query: (query) => ({
-                url: `/authors`,
+                url: `/author`,
                 method: METHOD.GET,
                 params: query,
             }),
             providesTags: [TagType.Author],
         }),
         getAuthorById: builder.query<SingleAuthor, string>({
-            query: (id) => `/authors/${id}`,
+            query: (id) => `/author/${id}`,
         }),
         addAuthor: builder.mutation<SingleAuthor, SingleAuthor>({
             query: (info) => {
                 return {
-                    url: "/authors",
-                    method: "POST",
+                    url: "/author",
+                    method: METHOD.POST,
                     body: info,
                 };
             },
@@ -28,8 +28,8 @@ export const authorApi = api.injectEndpoints({
         editAuthor: builder.mutation<void, SingleAuthor>({
             query: (info) => {
                 return {
-                    url: `/authors/${info.id}`,
-                    method: "PATCH",
+                    url: `/author/${info.id}`,
+                    method: METHOD.PATCH,
                     body: info,
                 };
             },
@@ -37,16 +37,16 @@ export const authorApi = api.injectEndpoints({
         deleteAuthor: builder.mutation<SingleAuthor, string>({
             query: (id) => {
                 return {
-                    url: `/authors/${id}`,
-                    method: "DELETE",
+                    url: `/author/${id}`,
+                    method: METHOD.DELETE,
                 };
             },
         }),
         bulkDeleteAuthors: builder.mutation<SingleAuthor, string[]>({
             query: (ids) => {
                 return {
-                    url: `/authors/bulk-delete`,
-                    method: "DELETE",
+                    url: `/author/bulk-delete`,
+                    method: METHOD.DELETE,
                     body: ids,
                 };
             },
@@ -54,8 +54,8 @@ export const authorApi = api.injectEndpoints({
         bulkUpdateAuthors: builder.mutation<SingleAuthor, SingleAuthor[]>({
             query: (info) => {
                 return {
-                    url: `/authors/bulk-update`,
-                    method: "PATCH",
+                    url: `/author/bulk-update`,
+                    method: METHOD.PATCH,
                     body: info,
                 };
             },
