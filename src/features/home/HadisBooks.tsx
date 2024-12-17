@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-
+import hadis from "../../../public/images/hadis.png";
 import { Card } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
@@ -41,8 +41,13 @@ const books: Book[] = [
 
 export function HadisBooks() {
     return (
-        <div className="container mx-auto rounded-[20px] bg-[#0D293B]">
-            <div className="mx-auto w-full max-w-6xl bg-[#0D293B] px-4 py-16">
+        <div className=" relative z-20  mt-[100px] flex  items-center overflow-hidden rounded-[12px] bg-gradient-to-r from-[#007CE3] to-[#072253] p-4 lg:mb-[100px] lg:mt-[-150px] lg:py-[90px]">
+            <div className="absolute inset-0 z-0 rounded-[12px]">
+                <div>
+                    <Image src={hadis} alt="" className="w-full" />
+                </div>
+            </div>
+            <div className="mx-auto w-full max-w-6xl px-4 py-16">
                 <div className="w-full px-4">
                     <div className="mb-12 md:max-w-[950px]">
                         <h2 className="pb-[16px] text-[32px] font-semibold leading-[42px] text-white sm:leading-[52px] md:text-[48px] md:leading-[62px]">

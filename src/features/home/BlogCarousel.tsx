@@ -1,35 +1,41 @@
 import { BlogPost } from "@/data/BlogPost";
 import { BlogCard } from "@/features/home/BlogCard";
-import { DynamicHeader } from "@/components/shared/DynamicHeader";
 
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { DynamicHeader } from "@/components/shared/DynamicHeader";
+import PrimaryButton from "@/components/shared/PrimaryButton";
 
 const BlogCarousel = () => {
     return (
-        <div className="mx-auto w-full max-w-6xl px-4 py-12">
-            <DynamicHeader
-                heading1="আমাদের"
-                heading2=" সমূহ"
-                highlight="ব্লগ"
-                description="ওয়েবসাইটটি ব্যবহারকারীদের একটি সমৃদ্ধ পাঠ অভিজ্ঞতা প্রদান করবে যেখানে তারা বিভিন্ন বিষয়বস্তুর উপর ভিত্তি করে বই পড়তে।"
-            />
-            <Carousel className="w-full">
-                <CarouselContent className="-ml-2 md:-ml-4">
-                    {BlogPost.map((post) => (
-                        <CarouselItem key={post.id} className="pl-2 md:basis-1/2 md:pl-4">
-                            <BlogCard post={post} />
-                        </CarouselItem>
-                    ))}
-                </CarouselContent>
+        <div className="bg-[url('/images/booksSectionBg.png')] bg-top bg-cover bg-no-repeat bg-[rgba(255,255,255,0.19)] lg:pb-[150px]">
+            <div className="container mx-auto px-4 py-12">
+                <Carousel className="w-full">
+                    {/* Dynamic Header */}
+                    <div className="flex items-center justify-between">
+                        <DynamicHeader
+                            heading1="আমাদের"
+                            heading2=" সমূহ"
+                            highlight="ব্লগ"
+                            description="ওয়েবসাইটটি ব্যবহারকারীদের একটি সমৃদ্ধ পাঠ অভিজ্ঞতা প্রদান করবে যেখানে তারা বিভিন্ন বিষয়বস্তুর উপর ভিত্তি করে বই পড়তে।"
+                        />
+                        <div className="flex gap-[20px]">
+                            <CarouselPrevious className="static h-12 w-12 rounded-full border border-[#007CE3] bg-white hover:bg-[#007CE3] hover:text-white" />
+                            <CarouselNext className="static h-12 w-12 rounded-full border border-[#007CE3] bg-white hover:bg-[#007CE3] hover:text-white" />
+                        </div>
+                    </div>
+                    <CarouselContent className="-ml-2 md:-ml-4">
+                        {BlogPost.map((post) => (
+                            <CarouselItem key={post.id} className="pl-2 md:basis-1/2 md:pl-4">
+                                <BlogCard post={post} />
+                            </CarouselItem>
+                        ))}
+                    </CarouselContent>
 
-                <div className="mt-8 flex items-center justify-center gap-4">
-                    <CarouselPrevious className="static mt-[40px] rounded-sm bg-gray-800 p-[20px] text-white hover:bg-gray-700 hover:text-white" />
-                    <button className="rounded-md bg-[#E7F54E] px-6 py-[10px] font-semibold text-black transition-colors hover:bg-[#d4e23a]">
-                        সকল বই
-                    </button>
-                    <CarouselNext className="static mt-[40px] rounded-sm bg-gray-800 p-[20px] text-white hover:bg-gray-700 hover:text-white" />
-                </div>
-            </Carousel>
+                    <div className="mt-8 flex items-center justify-center pt-[40px]">
+                        <PrimaryButton text="সকল বই" />
+                    </div>
+                </Carousel>
+            </div>
         </div>
     );
 };

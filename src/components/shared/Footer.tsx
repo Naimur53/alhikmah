@@ -6,7 +6,7 @@ import SocialLinks from "@/components/shared/socialLinks";
 
 const Footer = () => {
     return (
-        <footer className="bg-[#0F1F31] pt-16">
+        <footer className="bg-gradient-to-r from-[#007CE3] to-[#072253] pt-16">
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
                     {/* About Section */}
