@@ -12,7 +12,7 @@ import PrimaryButton from "@/components/shared/PrimaryButton";
 const PopularWriters = () => {
     return (
         <div className="w-full bg-[url('/images/writterBg.png')] bg-cover bg-center bg-no-repeat px-4 py-12 pb-[50px] lg:pb-[100px]">
-            <div className="container mx-auto lg:pb-[100px] lg:pt-[50px] pb-[60px]">
+            <div className="container mx-auto lg:pb-[100px] lg:pt-[50px] ">
                 {/* Carousel for Writers */}
                 <Carousel className="w-full">
                     {/* Dynamic Header */}
