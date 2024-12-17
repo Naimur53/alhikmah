@@ -50,7 +50,7 @@ export function HadisBooks() {
                     <Image src={hadis} alt="" className="w-full" />
                 </div>
             </div>
-            <div className="mx-auto w-full max-w-6xl px-4 py-16">
+            <div className="mx-auto container px-4 py-16">
                 <div className="w-full px-4">
                     <Carousel className="w-full">
                         {/* Dynamic Header */}
