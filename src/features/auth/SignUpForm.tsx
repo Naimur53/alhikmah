@@ -72,7 +72,7 @@ const SignUpForm = () => {
                         <Checkbox id="terms" className="mt-[3px]"  />
                         <label
                             htmlFor="terms"
-                            className="text-[13px] lg:text-[15px] text-gray-700 leading-[25x] peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                            className="text-[13px]  text-foreground leading-[24px] peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                         >
                             আপনি একটি অ্যাকাউন্ট তৈরি করে <span className="text-[#6AB6E8]">আমাদের শর্তাবলী</span> <br /> এবং <span className="text-[#6AB6E8]">গোপনীয়তা নীতিতে</span>  সম্মত হন।
                         </label>

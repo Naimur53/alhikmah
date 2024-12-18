@@ -29,20 +29,20 @@ const ForgotPasswordForm = () => {
     };
 
     return (
-        <div className="min-w-[350px] max-w-[670px] md:min-w-[665px]">
+        <div className="">
             <div className="pb-[30px]">
                 <Link href="/auth/sign-in">
-                    <BsArrowLeftCircle className="size-[50px] text-primary-500" />
+                    <BsArrowLeftCircle className="size-[40px] opacity-75 text-[#3d6d90]" />
                 </Link>
             </div>
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)}>
                     {/* Heading */}
-                    <h1 className="h1 pb-[20px]">
-                        পাসওয়ার্ড <span className="text-light-blue-600">ভুলে </span> গেছেন
+                    <h1 className="text-[22px] md:text-[32px] text-[#343f4c] pb-[20px]">
+                        পাসওয়ার্ড <span className="text-[#64AFE5]">ভুলে </span> গেছেন
                     </h1>
 
-                    <p className="pb-[20px] text-[20px] text-grey-800">
+                    <p className="pb-[20px] text-[14px]  text-[#838383]">
                         নির্ধারিত ক্ষেত্রে আপনার অ্যাকাউন্টের সাথে যুক্ত ইমেল <br /> ঠিকানা প্রদান করুন
                     </p>
 
@@ -57,7 +57,7 @@ const ForgotPasswordForm = () => {
 
                     {/* Submit Button */}
                     <Button
-                        className="mt-[30px] w-full bg-primary-500 py-[15px] text-[20px] hover:bg-primary-600"
+                        className="mt-[30px] sign-up-btn w-full bg-primary-500 py-[15px] text-[20px] hover:bg-primary-600"
                         type="submit"
                     >
                         পরবর্তী

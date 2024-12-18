@@ -62,14 +62,14 @@ const SignInForm = () => {
                             <Checkbox id="terms" className="mt-[3px]" />
                             <label
                                 htmlFor="terms"
-                                className="text-[16px] text-foreground leading-[25px]  peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                                className="text-[14px] text-[#838383] leading-[25px]  peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                             >
                                 আমাকে মনে রাখেন
                             </label>
                         </div>
                         <div>
                             <Link href="/auth/forgot-password">
-                                <p className="text-foreground underline">পাসওয়ার্ড ভুলে গেছেন</p>
+                                <p className="text-[#838383] text-[13px] underline">পাসওয়ার্ড ভুলে গেছেন</p>
                             </Link>
                         </div>
                     </div>

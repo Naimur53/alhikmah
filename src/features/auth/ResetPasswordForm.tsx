@@ -10,6 +10,7 @@ import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
 import CustomFormInput from "@/components/custom-ui/CustomFormInput";
+import BackButton from "@/components/ui/backButton";
 
 // Define schema for password and confirm password validation
 const formSchema = z
@@ -39,17 +40,16 @@ const ResetPasswordForm = () => {
     };
 
     return (
-        <div className="min-w-[350px] max-w-[670px] md:min-w-[665px]">
-            <div className="pb-[30px]">
-                <Link href="/auth/otp-verify">
-                    <BsArrowLeftCircle className="size-[50px] text-primary-500" />
-                </Link>
+        <div className="my-5">
+            <div className="my-5">
+                <BackButton></BackButton>
             </div>
+            
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)}>
                     {/* Heading */}
-                    <h1 className="h1 pb-[25px]">
-                        সাইন <span className="text-light-blue-600">ইন</span>
+                    <h1 className="lg:text-[32px] text-[24px] text-[#343f4c] pb-[20px]">
+                        পাসওয়ার্ড <span className="text-[#64AFE5]">রিসেট</span> করুন
                     </h1>
 
                     {/* Password Input */}
@@ -60,6 +60,7 @@ const ResetPasswordForm = () => {
                         control={form.control}
                         type="password"
                     />
+                    {''}
 
                     {/* Confirm Password Input */}
                     <CustomFormInput
@@ -72,10 +73,10 @@ const ResetPasswordForm = () => {
 
                     {/* Submit Button */}
                     <Button
-                        className="mt-[30px] w-full bg-primary-500 py-[15px] text-[20px] hover:bg-primary-600"
+                        className="mt-[30px] w-full sign-up-btn bg-primary-500 py-[15px] text-[20px] hover:bg-primary-600"
                         type="submit"
                     >
-                        পরবর্তী
+                        সাবমিট 
                     </Button>
                 </form>
             </Form>

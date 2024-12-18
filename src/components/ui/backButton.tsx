@@ -13,7 +13,7 @@ const BackButton = () => {
 
     return (
         <button onClick={goBack}>
-            <div className="rounded-full bg-white text-[#1F618D] my-4 text-base border border-[#1F618D] size-10 flex justify-center items-center">
+            <div className="rounded-full bg-white bg-opacity-20 text-[#1F618D] my-4 text-base border border-[#1F618D] size-10 flex justify-center items-center">
                 <FaArrowLeftLong />
             </div>
         </button>
