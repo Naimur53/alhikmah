@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Form } from "@/components/ui/form";
 import CustomFormInput from "@/components/custom-ui/CustomFormInput";
+import SocialAuth from "./SocialAuth";
 
 const formSchema = z.object({
     email: z.string().min(1, { message: "Email is required" }).email({ message: "Invalid email address" }),
@@ -33,11 +34,11 @@ const SignInForm = () => {
     };
 
     return (
-        <div className="min-w-[350px] max-w-[670px] md:min-w-[665px]">
+        <div >
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)}>
-                    <h1 className="h1 pb-[25px]">
-                        সাইন <span className="text-light-blue-600">ইন</span>{" "}
+                    <h1 className="text-[30px]  pb-[8px]">
+                        সাইন <span className="text-[#64AFE5]">ইন</span>{" "}
                     </h1>
                     <CustomFormInput
                         name="email"
@@ -55,30 +56,34 @@ const SignInForm = () => {
                         type="password"
                     />
                     <div className="flex items-center justify-between">
-                        <div className="flex items-start space-x-2 pt-[15px]">
-                            <Checkbox id="terms" />
+                        <div className="flex items-start space-x-2 pt-[10px]">
+                            <Checkbox id="terms" className="mt-[3px]" />
                             <label
                                 htmlFor="terms"
-                                className="text-[16px] leading-[25px] text-grey-800 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                                className="text-[16px] leading-[25px] text-gray-800 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                             >
                                 আমাকে মনে রাখেন
                             </label>
                         </div>
                         <div>
                             <Link href="/auth/forgot-password">
-                                <p className="text-dark-500 underline">পাসওয়ার্ড ভুলে গেছেন</p>
+                                <p className="text-gray-700 underline">পাসওয়ার্ড ভুলে গেছেন</p>
                             </Link>
                         </div>
                     </div>
 
                     <Button
-                        className="mt-[30px] w-full bg-primary-500 py-[15px] text-[20px] hover:bg-primary-600"
+                        className="mt-[30px] sign-up-btn w-full bg-primary-500 py-[15px] text-[20px] hover:bg-primary-600"
                         type="submit"
                     >
-                        সাইন আপ
+                        সাইন ইন
                     </Button>
 
-                    <p className="pt-[30px] text-[20px] text-dark-500">অথবা</p>
+                    <p className="text-[17px] text-dark-500 pt-[15px] text-center">অথবা</p>
+                    <SocialAuth />
+                    <p className="my-3 mx-auto text-center text-sm"> অ্যাকাউন্ট নাই ?
+                        <span className="text-blue-600 underline text-base"> সাইন-আপ করুন</span>
+                    </p>
                 </form>
             </Form>
         </div>

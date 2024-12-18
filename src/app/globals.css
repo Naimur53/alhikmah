@@ -202,3 +202,11 @@ html.lenis body {
     background-image: url('../assets/images/sign-up-right-bg.png');
     background-size: cover;
 }
+.noto-font{
+    font-family: 'Noto Sans Bengali', serif;
+}
+
+.sign-up-btn{
+    background-color: #1F618D;
+    
+}

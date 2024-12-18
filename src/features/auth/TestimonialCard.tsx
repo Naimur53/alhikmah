@@ -9,20 +9,20 @@ interface TestimonialProps {
 
 export function TestimonialCard({ content, author, role, image }: TestimonialProps) {
     return (
-        <div className="flex flex-col items-center  backdrop-blur-[4px] bg-white/15 space-y-6 rounded-[8px] bg-primary-800 p-5 text-center text-white lg:items-start lg:p-8 lg:text-start">
-            <div className="space-y-4">
-                <p className="text-[16px] font-normal leading-[24px] md:text-[18px] md:leading-[28px] lg:text-[20px] lg:leading-[32px]">
+        <div className="flex flex-col items-center xl:mb-7 backdrop-blur-[4px] bg-white/15 space-y-4 max-h-[300px] rounded-[8px] bg-primary-800 p-4 text-center text-white lg:items-start lg:p-6 lg:text-start">
+            <div className="space-y-2">
+                <p className="text-[15px] font- noto-font leading-[20px] md:text-[14px] md:leading-[26px] lg:text-[19px] lg:leading-[34px]">
                     {content}
                 </p>
             </div>
-            <div className="flex flex-col items-center space-y-4 lg:flex-row lg:space-x-4 lg:space-y-0">
-                <Avatar className="h-[56px] w-[56px] md:h-[64px] md:w-[64px] lg:h-[71px] lg:w-[71px]">
+            <div className="flex flex-col items-center space-y-4 lg:flex-row lg:space-x-3 lg:space-y-0">
+                <Avatar className="h-[45px] w-[45px] md:h-[48px] md:w-[48px] lg:h-[50px] lg:w-[50px]">
                     <AvatarImage src={image} alt={author} className="" />
                     <AvatarFallback>{author[0]}</AvatarFallback>
                 </Avatar>
                 <div className="text-center lg:text-left">
-                    <h3 className="text-[18px] font-semibold md:text-[20px]">{author}</h3>
-                    <p className="text-[16px] text-primary-200 opacity-80 md:text-[18px]">{role}</p>
+                    <h3 className="text-[13px] m-0  font-semibold md:text-[16px]">{author}</h3>
+                    <p className="text-[12px] text-primary-200 opacity-80 md:text-[15px]">{role}</p>
                 </div>
             </div>
         </div>

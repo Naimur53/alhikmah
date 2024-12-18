@@ -8,6 +8,9 @@ import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
 import CustomFormInput from "@/components/custom-ui/CustomFormInput";
 import { Checkbox } from "@/components/ui/checkbox";
+import { FaArrowLeftLong } from "react-icons/fa6";
+import BackButton from "@/components/ui/backButton";
+import SocialAuth from "./SocialAuth";
 
 const formSchema = z.object({
     name: z.string().min(1, { message: "Name is required" }),
@@ -33,10 +36,12 @@ const SignUpForm = () => {
     };
 
     return (
-        <div className="min-w-[350px] max-w-[670px] md:min-w-[665px]">
+        <div className=" ">
             <Form {...form}>
+                
                 <form onSubmit={form.handleSubmit(onSubmit)}>
-                    <h1 className="text-[48px] pb-[25px]">
+                    <BackButton></BackButton>  
+                    <h1 className="text-[26px]  pb-[8px]">
                         সাইন <span className="text-[#64AFE5]">আপ</span>{" "}
                     </h1>
                     <CustomFormInput
@@ -62,23 +67,27 @@ const SignUpForm = () => {
                         control={form.control}
                         type="password"
                     />
-                    <div className="flex items-start space-x-2 pt-[15px]">
-                        <Checkbox id="terms" />
+                    <div className="flex items-start justify-start space-x-2 pt-[10px]">
+                        <Checkbox id="terms" className="mt-[3px]"  />
                         <label
                             htmlFor="terms"
-                            className="text-[16px] text-grey-800 leading-[25px] peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                            className="text-[13px] lg:text-[15px] text-gray-700 leading-[25x] peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                         >
-                            আপনি একটি অ্যাকাউন্ট তৈরি করে <span className="text-light-blue-600">আমাদের শর্তাবলী</span> <br /> এবং <span className="text-light-blue-600">গোপনীয়তা নীতিতে</span>  সম্মত হন।
+                            আপনি একটি অ্যাকাউন্ট তৈরি করে <span className="text-[#6AB6E8]">আমাদের শর্তাবলী</span> <br /> এবং <span className="text-[#6AB6E8]">গোপনীয়তা নীতিতে</span>  সম্মত হন।
                         </label>
                     </div>
                     <Button
-                        className="mt-[30px] w-full bg-[#1F618D] py-[15px] text-[20px] hover:bg-primary-600"
+                        className="mt-[20px] w-full  sign-up-btn py-[15px] text-[20px] hover:bg-primary-600"
                         type="submit"
                     >
                         সাইন আপ
                     </Button>
 
-                    <p className="text-[20px] text-dark-500 pt-[30px]">অথবা</p>
+                    <p className="text-[17px] text-dark-500 pt-[15px] text-center">অথবা</p>
+                    <SocialAuth />
+                    <p className="mb-3 mx-auto text-center text-sm">অলরেডি অ্যাকাউন্ট আছে ?
+                        <span className="text-blue-600 underline text-base"> লগইন করুন</span>
+                    </p>
                 </form>
             </Form>
         </div>

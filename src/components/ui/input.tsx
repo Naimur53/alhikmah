@@ -33,7 +33,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
                     ref={ref}
                     type={type}
                     className={cn(
-                        `placeholder:text-muted-foreground h-5 w-full border-none bg-transparent outline-none`,
+                        `placeholder:text-muted-foreground h-4 w-full border-none bg-transparent outline-none`,
                         inputClassName
                     )}
                     onFocus={() => setIsFocused(true)}
