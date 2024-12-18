@@ -1,26 +1,20 @@
 import * as React from "react";
 import Image from "next/image";
-
-import { FaHeart } from "react-icons/fa6";
+ 
 
 import { Card } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { DynamicHeader } from "@/components/shared/DynamicHeader";
 import { Star } from "lucide-react";
 import PrimaryButton from "@/components/shared/PrimaryButton";
+import { Books } from "@/data/Books";
 
 type DynamicBooksProps = {
     heading1: string;
     heading2: string;
     highlight: string;
     description: string;
-    books: {
-        id: number;
-        title: string;
-        imageUrl: string;
-        readMoreLink: string;
-        rating: number;
-    }[];
+    books: Books[];
 };
 
 export function DynamicBooks({ heading1, heading2, highlight, description, books }: DynamicBooksProps) {
