@@ -11,7 +11,7 @@ export function Banner() {
                 <Image
                     src={Bismillah}
                     alt={"Bismillah"}
-                    className="h-[200px] w-full object-contain mb-[40x] lg:mb-[70px]"
+                    className="h-[200px] w-full object-contain mb-[40x] backdrop-blur-sm lg:mb-[70px]"
                     height={200}
                     width={200}
                 />

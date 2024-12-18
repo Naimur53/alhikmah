@@ -2,7 +2,7 @@ import { TestimonialSlider } from "./TestimonialSlider";
 
 const AuthWrapper = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="grid place-items-center xl:h-screen w-full grid-cols-1 2xl:grid-cols-2 gap-[1%]">
+    <div className="grid place-items-center xl:h-screen w-full grid-cols-1 xl:grid-cols-2 gap-[1%]">
       {/* Left Column */}
       <div className="p-4 md:p-6">{children}</div>
 
