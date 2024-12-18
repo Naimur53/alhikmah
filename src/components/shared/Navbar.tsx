@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 import { navLinks } from "@/data/navLinks";
 import { Menu } from "lucide-react";
@@ -33,9 +34,11 @@ export function Navbar() {
                     <button className="rounded-md bg-[#1F618D] px-[20px] py-[10px] text-sm font-medium text-white transition-colors hover:bg-[#4C81A4]">
                         ডোনেট করুন
                     </button>
-                    <button className="rounded-md border border-[#1F618D] px-[20px] py-[10px] text-sm font-medium text-[#1F618D] transition-colors hover:bg-gray-50">
-                        লগইন / রেজিস্টার
-                    </button>
+                    <Link href="/auth/sign-in">
+                        <button className="rounded-md border border-[#1F618D] px-[20px] py-[10px] text-sm font-medium text-[#1F618D] transition-colors hover:bg-gray-50">
+                            লগইন / রেজিস্টার
+                        </button>
+                    </Link>
                 </div>
 
                 {/* Mobile menu button */}

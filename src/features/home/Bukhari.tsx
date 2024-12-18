@@ -1,9 +1,9 @@
 const Bukhari = () => {
     return (
         <div
-            className="container my-[50px] flex h-[200px] items-center justify-center bg-[length:100%_160px] bg-no-repeat md:my-[140px] md:h-[355px] md:bg-contain"
+            className="container mx-auto my-[50px] flex h-[200px] items-center justify-center bg-[length:100%_160px] bg-no-repeat md:my-[140px] md:h-[355px] md:bg-contain"
             style={{
-                backgroundImage: `url('/images/bg.jpg')`,
+                backgroundImage: `url('/images/bg.png')`,
                 // backgroundSize: "10px",
                 backgroundPosition: "center",
             }}
