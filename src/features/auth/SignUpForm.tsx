@@ -36,8 +36,8 @@ const SignUpForm = () => {
         <div className="min-w-[350px] max-w-[670px] md:min-w-[665px]">
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)}>
-                    <h1 className="h1 pb-[25px]">
-                        সাইন <span className="text-light-blue-600">আপ</span>{" "}
+                    <h1 className="text-[48px] pb-[25px]">
+                        সাইন <span className="text-[#64AFE5]">আপ</span>{" "}
                     </h1>
                     <CustomFormInput
                         name="name"
@@ -72,7 +72,7 @@ const SignUpForm = () => {
                         </label>
                     </div>
                     <Button
-                        className="mt-[30px] w-full bg-primary-500 py-[15px] text-[20px] hover:bg-primary-600"
+                        className="mt-[30px] w-full bg-[#1F618D] py-[15px] text-[20px] hover:bg-primary-600"
                         type="submit"
                     >
                         সাইন আপ

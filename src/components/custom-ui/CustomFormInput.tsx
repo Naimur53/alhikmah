@@ -65,7 +65,7 @@ const CustomFormInput = <T extends FieldValues>({
                                 min={min}
                                 className={`pl-${icon && iconPosition === "start" ? "[50px]" : "4"} pr-${
                                     type === "password" || (icon && iconPosition === "end") ? "10" : "4"
-                                }`}
+                                } py-4`}
                             />
 
                             {/* Icon: Start Position */}

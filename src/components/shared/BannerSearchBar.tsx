@@ -5,7 +5,7 @@ import { FiSearch } from "react-icons/fi"; // For the search icon
 
 const BannerSearchBar: React.FC = () => {
     return (
-        <div className="flex items-center justify-center py-4">
+        <div className="flex items-center justify-center pb-4">
             <div className="flex w-full max-w-3xl items-center rounded-[8px] bg-white px-[20px] py-[10px] shadow-md">
                 {/* Input Field */}
                 <input

@@ -9,7 +9,7 @@ interface TestimonialProps {
 
 export function TestimonialCard({ content, author, role, image }: TestimonialProps) {
     return (
-        <div className="flex flex-col items-center space-y-6 rounded-[8px] bg-primary-800 p-6 text-center text-white lg:items-start lg:p-8 lg:text-start">
+        <div className="flex flex-col items-center  backdrop-blur-[4px] bg-white/15 space-y-6 rounded-[8px] bg-primary-800 p-5 text-center text-white lg:items-start lg:p-8 lg:text-start">
             <div className="space-y-4">
                 <p className="text-[16px] font-normal leading-[24px] md:text-[18px] md:leading-[28px] lg:text-[20px] lg:leading-[32px]">
                     {content}

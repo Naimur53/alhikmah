@@ -13,7 +13,7 @@ import { Card } from "@/components/ui/card";
 
 const testimonials = [
   {
-    content: "ওয়েবসাইটটি ব্যবহারকারীদের একটি সমৃদ্ধ পাঠ অভিজ্ঞতা প্রদান করবে যেখানে তারা বিভিন্ন বিষয়বস্তুর উপর ভিত্তি করে বই পড়তে।",
+    content: "ওয়েবসাইটটি ব্যবহারকারীদের একটি সমৃদ্ধ পাঠ অভিজ্ঞতা প্রদান করবে যেখানে তারা বিভিন্ন বিষয় ভিত্তি করে বই পড়তে।",
     author: "আল ফারুক",
     role: "প্রোডাক্ট ডিজাইনার",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2940&auto=format&fit=crop"
@@ -44,7 +44,7 @@ export function TestimonialSlider() {
   );
 
   return (
-    <div className="w-full h-full flex items-center justify-start pb-[70px] md:pb-0">
+    <div className="w-full max-h-[230px] flex items-center justify-start  ">
       <Carousel
         plugins={[plugin.current]}
         className="w-full max-w-2xl"
