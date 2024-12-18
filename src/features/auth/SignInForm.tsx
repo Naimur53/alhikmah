@@ -11,6 +11,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Form } from "@/components/ui/form";
 import CustomFormInput from "@/components/custom-ui/CustomFormInput";
 import SocialAuth from "./SocialAuth";
+import BackButton from "@/components/ui/backButton";
 
 const formSchema = z.object({
     email: z.string().min(1, { message: "Email is required" }).email({ message: "Invalid email address" }),
@@ -37,7 +38,8 @@ const SignInForm = () => {
         <div >
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)}>
-                    <h1 className="text-[30px]  pb-[8px]">
+                    <BackButton></BackButton>
+                    <h1 className="text-[30px] text-[#3B4856] pb-[8px]">
                         সাইন <span className="text-[#64AFE5]">ইন</span>{" "}
                     </h1>
                     <CustomFormInput
@@ -60,14 +62,14 @@ const SignInForm = () => {
                             <Checkbox id="terms" className="mt-[3px]" />
                             <label
                                 htmlFor="terms"
-                                className="text-[16px] leading-[25px] text-gray-800 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                                className="text-[16px] text-foreground leading-[25px]  peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                             >
                                 আমাকে মনে রাখেন
                             </label>
                         </div>
                         <div>
                             <Link href="/auth/forgot-password">
-                                <p className="text-gray-700 underline">পাসওয়ার্ড ভুলে গেছেন</p>
+                                <p className="text-foreground underline">পাসওয়ার্ড ভুলে গেছেন</p>
                             </Link>
                         </div>
                     </div>
@@ -79,10 +81,10 @@ const SignInForm = () => {
                         সাইন ইন
                     </Button>
 
-                    <p className="text-[17px] text-dark-500 pt-[15px] text-center">অথবা</p>
+                    <p className="text-[17px] text-dark-500 pt-[15px] text-foreground text-center">অথবা</p>
                     <SocialAuth />
-                    <p className="my-3 mx-auto text-center text-sm"> অ্যাকাউন্ট নাই ?
-                        <span className="text-blue-600 underline text-base"> সাইন-আপ করুন</span>
+                    <p className="my-5 text-foreground mx-auto text-center text-sm"> অ্যাকাউন্ট নাই ?
+                        <Link href="/auth/sign-up" className="text-blue-600 underline text-base"> সাইন-আপ করুন</Link>
                     </p>
                 </form>
             </Form>

@@ -11,6 +11,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import BackButton from "@/components/ui/backButton";
 import SocialAuth from "./SocialAuth";
+import Link from "next/link";
 
 const formSchema = z.object({
     name: z.string().min(1, { message: "Name is required" }),
@@ -41,7 +42,7 @@ const SignUpForm = () => {
                 
                 <form onSubmit={form.handleSubmit(onSubmit)}>
                     <BackButton></BackButton>  
-                    <h1 className="text-[26px]  pb-[8px]">
+                    <h1 className="text-[26px]  text-[#3B4856] pb-[8px]">
                         সাইন <span className="text-[#64AFE5]">আপ</span>{" "}
                     </h1>
                     <CustomFormInput
@@ -83,10 +84,10 @@ const SignUpForm = () => {
                         সাইন আপ
                     </Button>
 
-                    <p className="text-[17px] text-dark-500 pt-[15px] text-center">অথবা</p>
+                    <p className="text-[17px] text-dark-500 pt-[15px] text-center text-foreground">অথবা</p>
                     <SocialAuth />
-                    <p className="mb-3 mx-auto text-center text-sm">অলরেডি অ্যাকাউন্ট আছে ?
-                        <span className="text-blue-600 underline text-base"> লগইন করুন</span>
+                    <p className="mb-5 mx-auto text-center text-sm text-foreground">অলরেডি অ্যাকাউন্ট আছে ?
+                        <Link href="/auth/sign-in" className="text-blue-600 underline text-base"> সাইন-ইন করুন</Link>
                     </p>
                 </form>
             </Form>

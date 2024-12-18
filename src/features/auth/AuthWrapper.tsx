@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { TestimonialSlider } from "./TestimonialSlider";
+import Link from "next/link";
 
 
 const AuthWrapper = ({ children }: { children: React.ReactNode }) => {
@@ -12,9 +13,9 @@ const AuthWrapper = ({ children }: { children: React.ReactNode }) => {
         <div className="size-[170px] absolute roundded-full bg-blue-700 top-0 left-0 blur-[160px]"></div>
         <div className="size-[190px] absolute roundded-full -z-50 bg-blue-700 bottom-5 left-[30%] blur-[170px]"></div>
 
-        <Image className="absolute  top-[10%] right-[40%]" src="/images/bgStar.png" height={30} width={30} alt="star"></Image>
-        <Image className="absolute blur-[1px] top-[42%] left-[4%]" src="/images/bgStar.png" height={20} width={20} alt="star"></Image>
-        <Image className="absolute rotate-12 -bottom-2 right-[35%]" src="/images/bgStar.png" height={30} width={25} alt="star"></Image>
+        <Image className="absolute blur-[1px] top-[10%] right-[40%]" src="/images/bgStar.png" height={20} width={20} alt="star"></Image>
+        <Image className="absolute -rotate-[25deg] top-[42%] left-[4%]" src="/images/bgStar.png" height={30} width={30} alt="star"></Image>
+        <Image className="absolute rotate-12 bottom-2 right-[15%]" src="/images/bgStar.png" height={30} width={25} alt="star"></Image>
       </div>
 
       {/* Right Column */}
@@ -22,15 +23,15 @@ const AuthWrapper = ({ children }: { children: React.ReactNode }) => {
         
 
         {/* Content */}
-        <div className="lg:px-16 px-3 sm:px-6 w-full flex h-full py-5 flex-col justify-between">
+        <div className="lg:px-20 px-3 sm:px-6 w-full flex h-full py-5 flex-col justify-between">
           {/* Heading */}
-          <div className="md:my-8 my-5  top-4 flex items-center gap-4 mx-">
+          <Link href="/" className="md:my-8 my-5  top-4 flex items-center gap-4 mx-">
             <div className="h-12 w-12 bg-[#FFFFFF] rounded-md"></div>
             <h2 className="text-[18px] md:text-[20px] text-white lg:text-[24px]">আল হিকমাহ </h2>
-          </div>
+          </Link>
           {/* center content */}
-          <div className=" text-center my-[17%] h-full  md:text-start ">
-            <h1 className="lg:text-[28px] md:text-[24px] leading-[42px] pb-[12px]  text-[18px] font-semibold  md:leading-[62px]  text-white ">
+          <div className=" text-center my-[19%] mt-[22%] h-full  md:text-start ">
+            <h1 className="lg:text-[28px] md:text-[24px] leading-[40px] pb-[12px]  text-[18px] font-semibold  md:leading-[42px]  text-white ">
               ওয়েবসাইটটি{" "}
               <span className="text-yellow-500">ব্যবহারকারীদের</span> পাঠ
               অভিজ্ঞতা প্রদান করবে

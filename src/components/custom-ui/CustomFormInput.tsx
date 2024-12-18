@@ -49,7 +49,7 @@ const CustomFormInput = <T extends FieldValues>({
             defaultValue={defaultValue}
             render={({ field, fieldState: { error } }) => (
                 <FormItem className="space-y-1">
-                    <FormLabel className="text-foreground lg:text-[13spx] leading-[16px]">{label}</FormLabel>
+                    <FormLabel className="text-foreground  lg:text-[13px] leading-[16px]">{label}</FormLabel>
                     <FormControl>
                         <div className="relative pb-[8px] pt-1">
                             {/* Input Field */}
