@@ -197,3 +197,8 @@ html.lenis body {
 .lenis.lenis-smooth iframe {
     pointer-events: none;
 }
+
+.signup-right-bg{
+    background-image: url('../assets/images/sign-up-right-bg.png');
+    background-size: cover;
+}
