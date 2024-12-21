@@ -96,10 +96,10 @@ export function FeaturedBook() {
                 <div className="bg-shade lg:!size-[200px] -top-10 left-0 xl:-left-10"></div>
                 <div className="bg-shade lg:!size-[200px] xl:-right-10 bottom-0 md:top-[50%] right-[5%]"></div>
 
-                <Image className="bg-star lg:top-[5%] right-4 xl:right-[10%] blur-[1px] lg:blur-0" src="/images/bgStar.png" height={40} width={40} alt="star"></Image>
+                <Image className="bg-star lg:top-[5%] right-4 xl:right-[10%] " src="/images/bgStar.png" height={40} width={40} alt="star"></Image>
                 <Image className="bg-star top-[10%] left-[20%] " src="/images/bgStar.png" height={18} width={18} alt="star"></Image>
-                <Image className="bg-star top-[50%] left-[60%] blur-[1px] " src="/images/bgStar.png" height={15} width={15} alt="star"></Image>
-                <Image className="bg-star bottom-0 left-[5%] blur-[1px] -z-10" src="/images/bgStar.png" height={15} width={15} alt="star"></Image>
+                <Image className="bg-star top-[50%] left-[60%] " src="/images/bgStar.png" height={15} width={15} alt="star"></Image>
+                <Image className="bg-star bottom-0 left-[5%] -z-10" src="/images/bgStar.png" height={15} width={15} alt="star"></Image>
         </div>
     );
 }

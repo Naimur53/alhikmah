@@ -11,61 +11,63 @@ function BookInfo() {
                         {/* Left Column - Book Cover */}
                         <div className="flex flex-col items-center">
                             <Image height={350} width={250} src="/images/hadis1.jpg" alt="Book Cover" className="w-full max-w-md rounded-lg shadow-md" />
-                            <button className="mt-6 w-full max-w-md rounded-md bg-primary-500 px-6 py-3 text-white transition-colors hover:bg-primary-400">
+                            <button className="mt-6 w-full max-w-md rounded-md bg-[#1F618D] px-6 py-3 text-white transition-colors hover:bg-primary-400">
                                 ডাউনলোড করুন
                             </button>
                         </div>
 
                         {/* Right Column - Book Details */}
-                        <div className="space-y-4">
-                            <h2 className="">আর-রাহিকুল মাখতুম</h2>
+                        <div className="space-y-10">
+                            <h2 className="text-[#3B4856] text-[24px] lg:text-[36px]">আর-রাহিকুল মাখতুম</h2>
 
-                            <div className="space-y-2">
+                            <div className="space-y-3">
                                 <div className="flex gap-2">
-                                    <span className="text-gray-600">লেখক:</span>
-                                    <span>সাফিউর রহমান মুবারকপুরী (রহ.)</span>
+                                    <span className="text-[#3B4856] font-semibold">লেখক :</span>
+                                    <span className="text-[#838383]  ">সাফিউর রহমান মুবারকপুরী (রহ.)</span>
                                 </div>
                                 <div className="flex gap-2">
-                                    <span className="text-gray-600">প্রকাশনী:</span>
-                                    <span>সমকালীন প্রকাশন</span>
+                                    <span className="text-[#3B4856] font-semibold">প্রকাশনী :</span>
+                                    <span className="text-[#838383]  ">সমকালীন প্রকাশন</span>
                                 </div>
                                 <div className="flex gap-2">
-                                    <span className="text-gray-600">বিষয়:</span>
-                                    <span>সীরাতে রাসূল (সা.)</span>
+                                    <span className="text-[#3B4856] font-semibold">বিষয় :</span>
+                                    <span className="text-[#838383]  ">সীরাতে রাসূল (সা.)</span>
                                 </div>
                                 <div className="flex gap-2">
-                                    <span className="text-gray-600">মোট পৃষ্ঠায়:</span>
-                                    <span>৬৯৮</span>
+                                    <span className="text-[#3B4856] font-semibold">মোট পৃষ্ঠায় :</span>
+                                    <span className="text-[#838383]  ">৬৯৮</span>
                                 </div>
                             </div>
 
-                            <p className="mt-4 text-justify text-gray-700">
+                            <p className="my-4 leading-[26px] text-[14px] text-justify text-[#3B4856]">
                                 মুহাম্মদ সাল্লাল্লাহু আলাইহি ওয়া সাল্লামের জীবনী নিয়ে লিখিত একটি মহান গ্রন্থ।
                                 মানবজাতির সর্বশ্রেষ্ঠ আদর্শ মুহাম্মদ সাল্লাল্লাহু আলাইহি ওয়া সাল্লামের জীবনের প্রতিটি
                                 অধ্যায়কে লেখক অত্যন্ত সাবলীল ভাষায়, ব্যাপক তথ্য উপাত্ত সহ তুলে ধরেছেন। এটি একটি
-                                এনসাইক্লোপিডিয়া—যাই নিজেকে প্রস্তুত করে নিতে সহায়তা করবে।
+                                এনসাইক্লোপিডিয়া—যাই নিজেকে প্রস্তুত করে নিতে সহায়তা করবে। <br />
+                                বইটি এমনভাবে লেখা হয়েছে যে, পাঠকের মনে হবে নবিজীবনের আনন্দ-বেদনার সফরে সঙ্গী হয়ে রয়েছেন তিনিও। তায়েফ, উহুদ ও খন্দকের বেদনায় ভারাক্রান্ত হবে তার মন। বদর, মক্কা ও আরব জয়ের আনন্দে উল্লসিত হবে তার হৃদয়।
                             </p>
 
-                            <div className="mt-6">
-                                <h3 className="mb-2 text-xl font-semibold">শেয়ার করুন</h3>
-                                <div className="flex gap-4">
-                                    <a href="#" className="text-[#1a4977] hover:text-[#153a5f]">
-                                        <FaFacebookF size={20} />
+                            <div className="my-8">
+                                <h3 className="mb-2 text-lg text-[#3B4856]">শেয়ার করুন</h3>
+                                <p className="text-[#3B4856] my-6">সম্পূর্ণ  বইটি শেয়ার করুন। পাশে থাকুন। </p>
+                                <div className="flex gap-4 justify-evenly">
+                                    <a href="#" className="text-[#1a4977] hover:text-[#1F618D] p-6 bg-[#F7F7F7] rounded shadow-sm">
+                                        <FaFacebookF size={25} />
                                     </a>
-                                    <a href="#" className="text-[#1a4977] hover:text-[#153a5f]">
-                                        <FaInstagram size={20} />
+                                    <a href="#" className="text-[#1a4977] hover:text-[#1F618D] p-6 bg-[#F7F7F7] rounded shadow-sm">
+                                        <FaInstagram size={25} />
                                     </a>
-                                    <a href="#" className="text-[#1a4977] hover:text-[#153a5f]">
-                                        <FaTwitter size={20} />
+                                    <a href="#" className="text-[#1a4977] hover:text-[#1F618D] p-6 bg-[#F7F7F7] rounded shadow-sm">
+                                        <FaTwitter size={25} />
                                     </a>
-                                    <a href="#" className="text-[#1a4977] hover:text-[#153a5f]">
-                                        <FaPinterestP size={20} />
+                                    <a href="#" className="text-[#1a4977] hover:text-[#1F618D] p-6 bg-[#F7F7F7] rounded shadow-sm">
+                                        <FaPinterestP size={25} />
                                     </a>
-                                    <button className="text-[#1a4977] hover:text-[#153a5f]">
+                                    <button className="text-[#1a4977] hover:text-[#1F618D] p-6 bg-[#F7F7F7] rounded shadow-sm">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
-                                            width="20"
-                                            height="20"
+                                            width="25"
+                                            height="25"
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
@@ -81,6 +83,9 @@ function BookInfo() {
                             </div>
                         </div>
                     </div>
+                </div>
+                <div className="bg-[url('/images/dynamic-bg.png')] w-full h-24 bg-cover text-white text-[40px] lg:w-[85%] mx-auto font-semibold my-16 flex justify-center items-center rounded-md">
+                বই এর সূচিপত্র
                 </div>
             </div>
         </>

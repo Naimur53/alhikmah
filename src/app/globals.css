@@ -207,7 +207,7 @@ html.lenis body {
 }
 
 .signup-right-bg{
-    background-image: url('../assets/images/sign-up-right-bg.png');
+    background-image: url('/images/sign-bg.png');
     background-size: cover;
 }
 .noto-font{

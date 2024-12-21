@@ -10,13 +10,10 @@ const AuthWrapper = ({ children }: { children: React.ReactNode }) => {
       <div className="min-w-[92%] md:pl-32 ml-auto max-w-[670px] md:min-w-[665px]    xl:w-auto relative p-2 md:p-6 md:pb-0 lg:pr-5 mx-auto">
         <div className="p-4 md:pt- w-full ml-auto  relative z-40">{children}</div>
         
-        
-
-        
       </div>
 
       {/* backgrounds  */}
-      <Image className="absolute blur-[1px] top-[18%] left-[70%] xl:left-[35%]" src="/images/bgStar.png" height={20} width={20} alt="star"></Image>
+      <Image className="absolute top-[18%] left-[70%] xl:left-[35%]" src="/images/bgStar.png" height={20} width={20} alt="star"></Image>
       <Image className="absolute -rotate-[25deg] top-[42%] left-[4%]" src="/images/bgStar.png" height={30} width={30} alt="star"></Image>
       <Image className="absolute rotate-12 bottom-16 left-[19%]" src="/images/bgStar.png" height={30} width={25} alt="star"></Image>
       <div className="size-[170px] -z-10 absolute roundded-full bg-blue-700 top-0 left-0 blur-[160px]"></div>

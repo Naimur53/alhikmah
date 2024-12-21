@@ -22,9 +22,9 @@ const WishlistBooks = () => {
             <div className="bg-shade lg:!size-[230px] lg:!blur-[200px] -bottom-10 left-0 xl:-left-10"></div>
             <div className="bg-shade  lg:!size-[230px] lg:!blur-[200px] xl:-right-10 bottom-0 md:top-[30%] right-[5%]"></div>
 
-            <Image className="absolute  top-[2%] right-[4%] blur-[1px] z-20 rotate-[60deg]" src="/images/bgStar.png" height={28} width={28} alt="star"></Image> 
-            <Image className="absolute  top-[2%] right-[4%] blur-[1px] z-20 rotate-[60deg]" src="/images/bgStar.png" height={28} width={28} alt="star"></Image> 
-            <Image className="absolute bottom-10 left-[25%] blur-[1px] z-20 rotate-[60deg]" src="/images/bgStar.png" height={15} width={15} alt="star"></Image>/
+            <Image className="absolute  top-[2%] right-[4%] z-20 rotate-[60deg]" src="/images/bgStar.png" height={28} width={28} alt="star"></Image> 
+            <Image className="absolute  top-[2%] right-[4%] z-20 rotate-[60deg]" src="/images/bgStar.png" height={28} width={28} alt="star"></Image> 
+            <Image className="absolute bottom-10 left-[25%] z-20 rotate-[60deg]" src="/images/bgStar.png" height={15} width={15} alt="star"></Image>/
         </div>
     );
 };

@@ -123,7 +123,7 @@ const PopularWriters = () => {
             <div className="bg-shade lg:!size-[190px] blur-[260px] bottom-[30%]  left-0 "></div>
             <div className="bg-shade lg:size-[270px]  bottom-[10%] lg:bottom-[15%]  right-[5%]"></div>
 
-            <Image className="absolute top-[50%] left-[60%] blur-[1px] z-20 rotate-[60deg]" src="/images/bgStar.png" height={15} width={15} alt="star"></Image>
+            <Image className="absolute top-[50%] left-[60%]  z-20 rotate-[60deg]" src="/images/bgStar.png" height={15} width={15} alt="star"></Image>
         </div>
     );
 };

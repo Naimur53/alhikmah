@@ -22,8 +22,8 @@ function NewBooks() {
         />
       </div>
       {/* backgrounds */}
-      <Image className="bg-star top-[4%] lg:top-[10%] right-[14%] xl:right-[18%] 2xl:right-[22%] blur-[1px] lg:blur-0" src="/images/bgStar.png" height={30} width={30} alt="star"></Image>
-      <Image className="bg-star bottom-[4%] lg:bottom-[20%] left-[14%] xl:left-[18%] 2xl:left-[22%] lg:blur-0" src="/images/bgStar.png" height={40} width={40} alt="star"></Image>
+      <Image className="bg-star top-[4%] lg:top-[10%] right-[14%] xl:right-[18%] 2xl:right-[22%]" src="/images/bgStar.png" height={30} width={30} alt="star"></Image>
+      <Image className="bg-star bottom-[4%] lg:bottom-[20%] left-[14%] xl:left-[18%] 2xl:left-[22%]" src="/images/bgStar.png" height={40} width={40} alt="star"></Image>
     </div>
   );
 }
