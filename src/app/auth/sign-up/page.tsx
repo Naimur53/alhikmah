@@ -5,7 +5,6 @@ const SignUpPage = () => {
     return (
         <AuthWrapper>
             <SignUpForm />
-            
         </AuthWrapper>
     );
 };

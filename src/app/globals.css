@@ -218,3 +218,20 @@ html.lenis body {
     background-color: #1F618D;
     
 }
+
+.bg-shade{
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    border-radius: 9999px;
+    background-color: #1d4ed8;
+    filter: blur(140px);
+    z-index: -50;
+}
+
+.bg-star{
+    position: absolute;
+    z-index: -20;
+    transform: rotate(60deg);
+}
+

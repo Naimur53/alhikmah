@@ -26,15 +26,15 @@ const OTPVerifyForm = () => {
                     characterSelected: "character--selected",
                     characterFilled: "character--filled",
                 }}
-                />
+            />
                 
                 {''}
             
             <Button
-                className="mt-[20px] w-full  sign-up-btn py-[8px] lg:py-[15px] text-[16px] lg:text-[20px] hover:bg-primary-600"
+                className="mt-[20px] w-full  sign-up-btn py-[8px] lg:py-[30px] text-[14px] lg:text-[17px] hover:bg-primary-600"
                 type="submit"
             >
-                সাইন আপ
+                পরবর্তী
             </Button>
             <p className="underline my-5 text-blue-600 ">আবার কোড পাঠান</p>
         </form>

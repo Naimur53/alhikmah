@@ -4,6 +4,7 @@ import { BlogCard } from "@/features/home/BlogCard";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { DynamicHeader } from "@/components/shared/DynamicHeader";
 import PrimaryButton from "@/components/shared/PrimaryButton";
+import Image from "next/image";
 
 const BlogCarousel = () => {
     return (

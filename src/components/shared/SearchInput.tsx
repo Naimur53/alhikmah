@@ -10,6 +10,16 @@ import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
 import CustomFormInput from "@/components/custom-ui/CustomFormInput";
 
+import {
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectLabel,
+    SelectTrigger,
+    SelectValue,
+  } from "@/components/ui/select"
+
 // Define the schema for search input validation
 const formSchema = z.object({
     search: z.string().min(1, { message: "Search field cannot be empty" }),
@@ -29,13 +39,14 @@ const SearchInput = () => {
     };
 
     return (
-        <div className="container mx-auto my-[50px]">
+        <div className="container flex xl:gap-1 justify-between mx-auto my-[50px]">
             <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)}>
-                    <div className="flex items-center justify-center gap-[20px] rounded-[8px] bg-grey-200 p-[5px] px-[20px]">
+                <form onSubmit={form.handleSubmit(onSubmit)} className="w-full  lg:w-[85%]">
+                    <div className="flex  justify-center gap-[20px] rounded-[8px] bg-grey-200 p-[5px] px-[20px]">
                         <div className="w-full">
                             {/* Search Input */}
                             <CustomFormInput
+                                label="সার্চ করুন"
                                 name="search"
                                 placeholder="বইয়ের নাম ও লেখকের নাম দিয়ে সার্চ"
                                 control={form.control}
@@ -45,13 +56,24 @@ const SearchInput = () => {
                             />
                         </div>
 
-                        {/* Submit Button */}
-                        <Button className="bg-primary-500 py-[15px] text-[20px] hover:bg-primary-600" type="submit">
-                            <BsFilterSquare className="size-[25px]" />
-                        </Button>
                     </div>
                 </form>
             </Form>
+            <Select >
+                <div className="flex flex-col xl:mx-3">
+                    <label className="my-2 font-semibold text-[14px] text-[#3B4856]">সর্ট করুন</label>
+                    <SelectTrigger className="max-w-[180px] shadow border lg:w-[180px]  px-4 py-6 text-slate-500">
+                        <SelectValue placeholder={"Popularity"} />
+                    </SelectTrigger>
+                </div>
+                <SelectContent className="">
+                    <SelectGroup>
+                        <SelectLabel ></SelectLabel>
+                        <SelectItem  value="Popularity">Popularity</SelectItem>
+                        <SelectItem value="new">New</SelectItem>
+                    </SelectGroup>
+                </SelectContent>
+            </Select>
         </div>
     );
 };

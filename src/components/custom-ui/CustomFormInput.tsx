@@ -48,8 +48,8 @@ const CustomFormInput = <T extends FieldValues>({
             }}
             defaultValue={defaultValue}
             render={({ field, fieldState: { error } }) => (
-                <FormItem className="space-y-1">
-                    <FormLabel className="text-[#3f3e3e]  lg:text-[13px] leading-[16px]">{label}</FormLabel>
+                <FormItem className="space-y-1 text-[#3B4856]">
+                    <FormLabel className="text-[#3f3e3e] font-semibold  lg:text-[14px] leading-[16px]">{label}</FormLabel>
                     <FormControl>
                         <div className="relative pb-[8px] pt-1">
                             {/* Input Field */}
@@ -91,7 +91,7 @@ const CustomFormInput = <T extends FieldValues>({
 
                             {/* Icon: End Position */}
                             {icon && iconPosition === "end" && type !== "password" && (
-                                <div className="absolute inset-y-0 right-3 flex cursor-pointer items-center">
+                                <div className="absolute inset-y-0  right-3 flex cursor-pointer items-center">
                                     {icon}
                                 </div>
                             )}

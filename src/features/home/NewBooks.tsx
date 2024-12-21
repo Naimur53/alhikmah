@@ -2,11 +2,12 @@ import React from "react";
 import booksSectionBg from "../../../public/images/booksSectionBg.png";
 import { Books } from "@/data/Books";
 import { DynamicBooks } from "@/features/home/DynamicBooks";
+import Image from "next/image";
 
 function NewBooks() {
   return (
     <div
-      className="bg-[url('/images/booksSectionBg.png')] bg-top bg-cover bg-no-repeat bg-[rgba(255,255,255,0.19)] lg:pb-[150px]"
+      className="bg-[url('/images/booksSectionBg.png')] relative bg-top bg-cover bg-no-repeat bg-[rgba(255,255,255,0.19)] lg:pb-[150px]"
     >
       {/* Content Section */}
       <div className="p-10">
@@ -20,6 +21,9 @@ function NewBooks() {
           }
         />
       </div>
+      {/* backgrounds */}
+      <Image className="bg-star top-[4%] lg:top-[10%] right-[14%] xl:right-[18%] 2xl:right-[22%] blur-[1px] lg:blur-0" src="/images/bgStar.png" height={30} width={30} alt="star"></Image>
+      <Image className="bg-star bottom-[4%] lg:bottom-[20%] left-[14%] xl:left-[18%] 2xl:left-[22%] lg:blur-0" src="/images/bgStar.png" height={40} width={40} alt="star"></Image>
     </div>
   );
 }

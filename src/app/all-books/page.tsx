@@ -10,7 +10,6 @@ function AllBooks() {
     return (
         <div>
             <DynamicBanner heading="বই সমূহ" />
-            <SearchInput />
             <ShowAllBooks />
             <PaginationDemo />
         </div>

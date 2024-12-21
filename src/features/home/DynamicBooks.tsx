@@ -8,6 +8,7 @@ import { DynamicHeader } from "@/components/shared/DynamicHeader";
 import { Star } from "lucide-react";
 import PrimaryButton from "@/components/shared/PrimaryButton";
 import { Books } from "@/data/Books";
+import Link from "next/link";
 
 type DynamicBooksProps = {
     heading1: string;
@@ -74,7 +75,7 @@ export function DynamicBooks({ heading1, heading2, highlight, description, books
                     </CarouselContent>
                     
                     <div className="mt-8 flex items-center justify-center pt-[40px]">
-                        <PrimaryButton text="সকল বই"/>
+                       <Link href="/all-books" > <PrimaryButton text="সকল বই"/></Link>
                     </div>
                 </Carousel>
         </div>

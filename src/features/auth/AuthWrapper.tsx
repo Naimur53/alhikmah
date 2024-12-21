@@ -10,13 +10,17 @@ const AuthWrapper = ({ children }: { children: React.ReactNode }) => {
       <div className="min-w-[92%] md:pl-32 ml-auto max-w-[670px] md:min-w-[665px]    xl:w-auto relative p-2 md:p-6 md:pb-0 lg:pr-5 mx-auto">
         <div className="p-4 md:pt- w-full ml-auto  relative z-40">{children}</div>
         
-        <div className="size-[170px] absolute roundded-full bg-blue-700 top-0 left-0 blur-[160px]"></div>
-        <div className="size-[190px] absolute roundded-full -z-50 bg-blue-700 bottom-5 left-[30%] blur-[170px]"></div>
+        
 
-        <Image className="absolute blur-[1px] top-[10%] right-[40%]" src="/images/bgStar.png" height={20} width={20} alt="star"></Image>
-        <Image className="absolute -rotate-[25deg] top-[42%] left-[4%]" src="/images/bgStar.png" height={30} width={30} alt="star"></Image>
-        <Image className="absolute rotate-12 bottom-2 right-[15%]" src="/images/bgStar.png" height={30} width={25} alt="star"></Image>
+        
       </div>
+
+      {/* backgrounds  */}
+      <Image className="absolute blur-[1px] top-[18%] left-[70%] xl:left-[35%]" src="/images/bgStar.png" height={20} width={20} alt="star"></Image>
+      <Image className="absolute -rotate-[25deg] top-[42%] left-[4%]" src="/images/bgStar.png" height={30} width={30} alt="star"></Image>
+      <Image className="absolute rotate-12 bottom-16 left-[19%]" src="/images/bgStar.png" height={30} width={25} alt="star"></Image>
+      <div className="size-[170px] -z-10 absolute roundded-full bg-blue-700 top-0 left-0 blur-[160px]"></div>
+      <div className="size-[190px]  absolute roundded-full -z-50 bg-blue-700 bottom-5 left-[20%] blur-[170px]"></div>
 
       {/* Right Column */}
       <div  className="center hidden  none xl:block w-full overflow-hidden min-w-[600px] max-w-[700px]  signup-right-bg col-span-5 relative h-full bg-primary-900   text-white">
@@ -25,7 +29,7 @@ const AuthWrapper = ({ children }: { children: React.ReactNode }) => {
         {/* Content */}
         <div className="lg:px-20 px-3 sm:px-6 w-full flex h-full py-5 flex-col justify-between">
           {/* Heading */}
-          <Link href="/" className="md:my-8 my-5  top-4 flex items-center gap-4 mx-">
+          <Link href="/" className="md:my-8 my-5 top-4 flex items-center gap-4 mx-">
             <div className="h-12 w-12 bg-[#FFFFFF] rounded-md"></div>
             <h2 className="text-[18px] md:text-[20px] text-white lg:text-[24px]">আল হিকমাহ </h2>
           </Link>
