@@ -52,7 +52,7 @@ export function DynamicBooks({ heading1, heading2, highlight, description, books
                                     <div className="absolute inset-0 bg-[#164564E3] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-center text-white">
                                         <h3 className="mb-2 text-[20px] md:text-[24px] lg:text-[28px] font-bold">{book.title}</h3>
                                         <a
-                                            href={book.readMoreLink}
+                                            href="/all-books"
                                             className="text-[16px] md:text-[18px] lg:text-[20px] font-semibold text-[#F3F630] hover:text-yellow-500 transition-colors duration-200"
                                         >
                                             {book.readMoreLink}

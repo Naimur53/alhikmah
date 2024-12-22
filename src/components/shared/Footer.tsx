@@ -30,7 +30,7 @@ const Footer = () => {
                 </div>
 
                 {/* Copyright */}
-                <div className="mt-12 border-t border-gray-700 py-8">
+                <div className="mt-12 border-t border-[#164564] py-8">
                     <p className="text-center text-gray-400">কপিরাইট © আল-হিকমাহ ২০২৪</p>
                 </div>
             </div>

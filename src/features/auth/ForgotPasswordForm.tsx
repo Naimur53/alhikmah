@@ -57,7 +57,7 @@ const ForgotPasswordForm = () => {
 
                     {/* Submit Button */}
                     <Button
-                        className="mt-[30px] sign-up-btn w-full bg-primary-500 py-[15px] text-[20px] hover:bg-primary-600"
+                        className="mt-[30px] sign_up_button_bg w-full bg-primary-500 py-[15px] text-[20px] hover:bg-primary-600"
                         type="submit"
                     >
                         পরবর্তী

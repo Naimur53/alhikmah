@@ -1,19 +1,19 @@
 import React from "react";
 import Image from "next/image";
 
-import { Publishers } from "@/data/Publishers";
 
 import { Card } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { DynamicHeader } from "@/components/shared/DynamicHeader";
 import PrimaryButton from "@/components/shared/PrimaryButton";
+import { Publishers } from "@/data/Publishers";
 
 function PopularPublishers() {
     return (
         <div className="w-full bg-[url('/images/writterBg.png')] bg-cover bg-center bg-no-repeat px-4 py-12">
             <div className="container mx-auto">
                 {/* Carousel for Writers */}
-                <Carousel className="w-full">
+                <Carousel className="w-full px-4">
                     {/* Dynamic Header */}
                     <div className="flex items-center justify-between">
                         <DynamicHeader
@@ -31,15 +31,15 @@ function PopularPublishers() {
                     </div>
                     <CarouselContent className="-ml-2 md:-ml-4">
                         {Publishers?.length > 0 ? (
-                            Publishers.map((Publisher) => (
-                                <CarouselItem key={Publisher.id} className="pl-2 md:basis-1/5 md:pl-4">
+                            Publishers.map((publisher) => (
+                                <CarouselItem key={publisher.id} className="pl-2 md:basis-1/5 md:pl-4">
                                     <div className="group rounded-[8px] bg-[#F7F7F7] p-[20px]">
                                         <Card className="flex h-full flex-col border-none bg-inherit shadow-none">
                                             {/* Image Row */}
                                             <div className="relative h-48 w-full overflow-hidden rounded-t-lg">
                                                 <Image
-                                                    src={Publisher.imageUrl}
-                                                    alt={Publisher.name}
+                                                    src={publisher.imageUrl}
+                                                    alt={publisher.name}
                                                     className="h-[200px] w-full object-contain"
                                                     height={200}
                                                     width={200}

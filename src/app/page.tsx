@@ -18,7 +18,7 @@ import StatsSection from "@/features/home/StatsSection";
 export default function Home() {
     return (
         <>
-            <Navbar />
+            {/* <Navbar /> */}
             <Banner />
             <StatsSection/>
             <FeaturedBook />

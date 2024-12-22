@@ -24,6 +24,7 @@ export function Navbar() {
                         {navLinks.map((link) => (
                             <NavLink key={link.id} href={link.href}>
                                 {link.title}
+                                
                             </NavLink>
                         ))}
                     </div>

@@ -30,7 +30,19 @@ const NewsletterForm = () => {
                         <span className="text-[#F3F630]">সাবস্ক্রাইব</span> করুন
                     </h1>
                 </div>
-                <form onSubmit={handleSubmit} className="mt-6 flex w-full flex-col space-y-4 lg:mt-0 lg:w-[400px]">
+
+                <form onSubmit={handleSubmit} className="w-full flex flex-col space-y-4 lg:mt-0 lg:w-[400px]">
+                    <input
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="ইমেইল ঠিকানা লিখুন"
+                        className="w-full rounded bg-[#F7F7F7] px-4 py-3 text-white placeholder-[#838383] focus:outline-none  focus:ring-none"
+                    />
+                    <PrimaryButton text="সাবস্ক্রাইব করুন" className="lg:self-start self-center"/>
+                </form>
+
+                {/* <form onSubmit={handleSubmit} className="mt-6 flex w-full flex-col space-y-4 lg:mt-0 lg:w-[400px]">
                     <input
                         type="email"
                         value={email}
@@ -39,7 +51,7 @@ const NewsletterForm = () => {
                         className="w-full rounded bg-[#F7F7F7] px-4 py-3 text-white placeholder-[#838383] focus:outline-none  focus:ring-none"
                     />
                     <PrimaryButton text="সাবস্ক্রাইব করুন" className="self-start"/>
-                </form>
+                </form> */}
             </div>
         </div>
     );

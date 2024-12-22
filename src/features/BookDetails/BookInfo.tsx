@@ -6,12 +6,12 @@ function BookInfo() {
     return (
         <>
             <div className="mx-auto container pt-[50px] md:pt-[100px]">
-                <div className="rounded-lg bg-white p-6 shadow-lg">
+                <div className="rounded-lg bg-white p-6">
                     <div className="grid gap-8 md:grid-cols-2">
                         {/* Left Column - Book Cover */}
                         <div className="flex flex-col items-center">
-                            <Image height={350} width={250} src="/images/hadis1.jpg" alt="Book Cover" className="w-full max-w-md rounded-lg shadow-md" />
-                            <button className="mt-6 w-full max-w-md rounded-md bg-[#1F618D] px-6 py-3 text-white transition-colors hover:bg-primary-400">
+                            <Image height={400} width={400} quality={100} src="/images/hadis1.png" alt="Book Cover" className="w-full max-w-md rounded-lg shadow-md" />
+                            <button className="mt-6 w-full max-w-md rounded-md sign_up_button_bg  py-[25px] text-white transition-colors hover:bg-primary-400">
                                 ডাউনলোড করুন
                             </button>
                         </div>
@@ -50,24 +50,24 @@ function BookInfo() {
                             <div className="my-8">
                                 <h3 className="mb-2 text-lg text-[#3B4856]">শেয়ার করুন</h3>
                                 <p className="text-[#3B4856] my-6">সম্পূর্ণ  বইটি শেয়ার করুন। পাশে থাকুন। </p>
-                                <div className="flex gap-4 justify-evenly">
-                                    <a href="#" className="text-[#1a4977] hover:text-[#1F618D] p-6 bg-[#F7F7F7] rounded shadow-sm">
-                                        <FaFacebookF size={25} />
+                                <div className="flex gap-[35px] ">
+                                    <a href="#" className="text-[#1a4977] hover:text-[#1F618D] p-6 bg-[#F7F7F7] rounded-[8px] shadow-sm">
+                                        <FaFacebookF size={40} />
                                     </a>
-                                    <a href="#" className="text-[#1a4977] hover:text-[#1F618D] p-6 bg-[#F7F7F7] rounded shadow-sm">
-                                        <FaInstagram size={25} />
+                                    <a href="#" className="text-[#1a4977] hover:text-[#1F618D] p-6 bg-[#F7F7F7] rounded-[8px] shadow-sm">
+                                        <FaInstagram size={40} />
                                     </a>
-                                    <a href="#" className="text-[#1a4977] hover:text-[#1F618D] p-6 bg-[#F7F7F7] rounded shadow-sm">
-                                        <FaTwitter size={25} />
+                                    <a href="#" className="text-[#1a4977] hover:text-[#1F618D] p-6 bg-[#F7F7F7] rounded-[8px] shadow-sm">
+                                        <FaTwitter size={40} />
                                     </a>
-                                    <a href="#" className="text-[#1a4977] hover:text-[#1F618D] p-6 bg-[#F7F7F7] rounded shadow-sm">
-                                        <FaPinterestP size={25} />
+                                    <a href="#" className="text-[#1a4977] hover:text-[#1F618D] p-6 bg-[#F7F7F7] rounded-[8px] shadow-sm">
+                                        <FaPinterestP size={40} />
                                     </a>
-                                    <button className="text-[#1a4977] hover:text-[#1F618D] p-6 bg-[#F7F7F7] rounded shadow-sm">
+                                    <button className="text-[#1a4977] hover:text-[#1F618D] p-6 bg-[#F7F7F7] rounded-[8px] shadow-sm">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
-                                            width="25"
-                                            height="25"
+                                            width="40"
+                                            height="40"
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"

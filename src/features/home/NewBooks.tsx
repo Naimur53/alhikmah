@@ -10,7 +10,7 @@ function NewBooks() {
       className="bg-[url('/images/booksSectionBg.png')] relative bg-top bg-cover bg-no-repeat bg-[rgba(255,255,255,0.19)] lg:pb-[150px]"
     >
       {/* Content Section */}
-      <div className="p-10">
+      <div className="p-5">
         <DynamicBooks
           books={Books}
           heading1={"নূতন "}

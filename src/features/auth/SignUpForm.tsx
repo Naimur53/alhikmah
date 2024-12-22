@@ -78,7 +78,7 @@ const SignUpForm = () => {
                         </label>
                     </div>
                     <Button
-                        className="mt-[20px] w-full  sign-up-btn py-[15px] text-[20px] hover:bg-primary-600"
+                        className="mt-[20px] w-full  sign_up_button_bg py-[15px] text-[20px] hover:bg-primary-600"
                         type="submit"
                     >
                         সাইন আপ

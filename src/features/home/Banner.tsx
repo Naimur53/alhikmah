@@ -11,9 +11,10 @@ export function Banner() {
                 <Image
                     src={Bismillah}
                     alt={"Bismillah"}
-                    className="h-[200px] mx-auto w-[500px] backdrop-blur-md  object-contain mb-[40x] lg:mb-[70px]"
-                    height={200}
-                    width={200}
+                    className="h-[200px] mx-auto w-[500px] object-contain mb-[40x] lg:mb-[70px]"
+                    height={400}
+                    width={400}
+                    quality={100}
                 />
                 <BannerSearchBar/>
 

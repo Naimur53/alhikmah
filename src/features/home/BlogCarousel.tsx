@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const BlogCarousel = () => {
     return (
-        <div className="bg-[url('/images/booksSectionBg.png')] bg-top bg-cover bg-no-repeat bg-[rgba(255,255,255,0.19)] lg:pb-[150px]">
+        <div className="bg-[url('/images/booksSectionBg.png')] bg-top bg-cover bg-no-repeat bg-[rgba(255,255,255,0.19)] lg:pb-[150px] px-[20px]">
             <div className="container mx-auto px-4 py-12">
                 <Carousel className="w-full">
                     {/* Dynamic Header */}
@@ -33,7 +33,7 @@ const BlogCarousel = () => {
                     </CarouselContent>
 
                     <div className="mt-8 flex items-center justify-center pt-[40px]">
-                        <PrimaryButton text="সকল বই" />
+                        <PrimaryButton text="সকল ব্লগ" />
                     </div>
                 </Carousel>
             </div>

@@ -12,7 +12,7 @@ const Bukhari = () => {
         >
             {/* Content */}
             <div className="max-w-[90%] px-4 text-center text-black xl:max-w-[1050px]">
-                <p className="text-[14px] font-medium leading-[20px] text-[#3B4856] md:text-[20px] md:leading-[30px] xl:text-[30px] xl:leading-[42px]">
+                <p className="text-[14px] font-medium leading-[20px] text-[#3B4856] md:text-[18px] md:leading-[30px] xl:text-[30px] xl:leading-[42px]">
                     কসম খোদার! তোমার মাধ্যমে একজন মানুষের হেদায়েত হওয়াটা তোমার জন্য অনেকগুলি ‘লাল উটের’ মালিক হওয়ার চেও
                     অধিক সৌভাগ্যের বিষয়।
                 </p>

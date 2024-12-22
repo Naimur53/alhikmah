@@ -7,6 +7,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import PrimaryButton from "@/components/shared/PrimaryButton";
 
 import hadis from "../../../public/images/hadis.png";
+import Link from "next/link";
 
 type Book = {
     id: number;
@@ -18,27 +19,27 @@ const books: Book[] = [
     {
         id: 1,
         title: "সহিহ বুখারী",
-        imageUrl: "/images/hadis1.jpg",
+        imageUrl: "/images/hadis1.png",
     },
     {
         id: 2,
         title: "সুনান ইবনে মাজাহ",
-        imageUrl: "/images/hadis2.jpg",
+        imageUrl: "/images/hadis2.png",
     },
     {
         id: 3,
         title: "মুয়াত্তা ইমাম মালিক",
-        imageUrl: "/images/hadis3.jpg",
+        imageUrl: "/images/hadis3.png",
     },
     {
         id: 4,
         title: "সুনান আবু দাউদ",
-        imageUrl: "/images/hadis4.jpg",
+        imageUrl: "/images/hadis4.png",
     },
     {
         id: 5,
         title: "সুনান আবু দাউদ",
-        imageUrl: "/images/hadis2.jpg",
+        imageUrl: "/images/hadis2.png",
     },
 ];
 
@@ -47,7 +48,9 @@ export function HadisBooks() {
         <div className="relative z-20 mt-[100px] flex items-center overflow-hidden rounded-[12px] bg-gradient-to-r from-[#007CE3] to-[#072253] p-4 lg:mb-[100px] lg:mt-[-150px] lg:py-[90px]">
             <div className="absolute inset-0 z-0 rounded-[12px]">
                 <div>
-                    <Image src={hadis} alt="" className="w-full" />
+                    <Image src={hadis} alt="" height={400}
+                    width={400}
+                    quality={100} className="w-full" />
                 </div>
             </div>
             <div className="mx-auto container px-4 py-16">
@@ -57,7 +60,7 @@ export function HadisBooks() {
                         <div className="flex items-center justify-between">
                             <div className="mb-12 md:max-w-[950px]">
                                 <h2 className="pb-[16px] text-[32px] font-semibold leading-[42px] text-white sm:leading-[52px] md:text-[48px] md:leading-[62px]">
-                                    <span className="text-[#6AB6E8]">হাদিসের </span>
+                                    <span className="text-[#FFDC05]">হাদিসের </span>
                                     বই সমূহ
                                 </h2>
                                 <p className="pb-[30px] text-[18px] text-[#A5ABB1] md:pb-[55px] md:text-[24px] lg:text-[28px]">
@@ -90,7 +93,7 @@ export function HadisBooks() {
                         </CarouselContent>
 
                         <div className="mt-8 flex items-center justify-center gap-4">
-                            <PrimaryButton text="সকল বই" />
+                        <Link href="/all-books" > <PrimaryButton text="সকল বই"/></Link>
                         </div>
                     </Carousel>
                 </div>

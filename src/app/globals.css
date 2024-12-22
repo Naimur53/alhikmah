@@ -133,7 +133,7 @@ body {
 
 @layer base {
     h1 {
-        @apply pb-[16px] text-[32px] font-semibold leading-[35px] text-foreground md:text-[56px] md:leading-[62px];
+        @apply pb-[16px] text-[32px] font-semibold leading-[35px] text-foreground md:text-[56px] md:leading-[72px];
     }
     h2 {
         @apply text-[24px] font-semibold text-foreground md:text-[35px] lg:text-5xl;
@@ -150,6 +150,9 @@ body {
     .donation_bg {
         
         @apply bg-gradient-to-r from-[#007CE3] to-[#072253];
+    }
+    .navlink_hover {
+        @apply bg-gradient-to-r  hover:from-[#FFC641] hover:to-[#FFDD00] transition-all duration-500 rounded-full ease-in-out hover:text-[#0D293B];
     }
     
 }
@@ -214,9 +217,14 @@ html.lenis body {
     font-family: 'Noto Sans Bengali', serif;
 }
 
-.sign-up-btn{
-    background-color: #1F618D;
+.sign_up_button_bg{
+    background-color: #1F618D; 
     
+}
+
+.feature_img_shadow{
+    background: var(--dark-dark-700, #2A333D);
+
 }
 
 .bg-shade{

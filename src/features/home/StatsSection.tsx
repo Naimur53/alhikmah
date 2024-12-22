@@ -12,7 +12,7 @@ const StatsSection: React.FC = () => {
     ];
 
     return (
-        <div className="mx-auto mt-10 max-w-7xl rounded-[8px] lg:mt-[-65px] bg-white px-4 py-8 shadow-lg sm:px-6 lg:px-8">
+        <div className="xl:mx-auto mt-10 max-w-[1260px] rounded-[8px] lg:mt-[-65px] bg-white px-4 py-8 mx-5 shadow-lg sm:px-6 lg:px-8 ">
             <div className="flex flex-wrap justify-center gap-8 lg:flex-nowrap lg:gap-0">
                 {stats.map((stat, index) => (
                     <div

@@ -2,53 +2,52 @@ import React from "react";
 import Image from "next/image";
 
 import { FaHeart } from "react-icons/fa";
+import { Card } from "@/components/ui/card";
+import { Star } from "lucide-react";
 
 type SingleBookProps = {
     book: {
         imageUrl: string;
         title: string;
         readMoreLink: string;
+        rating:number;
     };
 };
 
 const SingleBook: React.FC<SingleBookProps> = ({ book }) => {
     return (
-        <div className="group relative">
-            <div className="overflow-hidden rounded-[8px] mx-[20px] md:mx-0 border-2 border-gray-100 bg-gray-50 transition-all duration-500 hover:bg-primary-900">
-                <div className="p-4">
-                    {/* Image Container */}
-                    <div className="relative mb-4  h-[300px] md:h-[350px] lg:h-[400px]">
-                        <Image
-                            src={book.imageUrl}
-                            alt={book.title}
-                            className="h-full w-full rounded-lg object-cover"
-                            height={400}
-                            width={400}
-                        />
-                        <button className="absolute right-2 top-2 rounded-full bg-white/80 p-2 transition-colors hover:bg-white">
-                            <FaHeart className="h-5 w-5" />
-                        </button>
-                    </div>
-
-                    {/* Title */}
-                    <h3 className="mb-4 text-lg font-semibold text-gray-900 transition-all duration-500 group-hover:text-white sm:text-xl lg:text-2xl">
-                        {book.title}
-                    </h3>
-
-                    {/* Read More Link */}
-                    <div className="flex items-center justify-between">
-                        <a
-                            href={book.readMoreLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-sm text-blue-600 transition-all duration-500 group-hover:text-yellow-500 md:text-base"
-                        >
-                            {book.readMoreLink}
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+            <Card className="overflow-hidden rounded-[8px] border-none bg-white shadow-lg transition-all duration-300 hover:shadow-xl">
+                                <div className="relative aspect-[3/4] w-full group">
+                                    {/* Image */}
+                                    <Image
+                                        src={book.imageUrl}
+                                        alt={book.title}
+                                        fill
+                                        className="object-cover "
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    />
+                                    
+                                    {/* Hover Overlay */}
+                                    <div className="absolute inset-0 bg-[#164564E3] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-center text-white">
+                                        <h3 className="mb-2 text-[20px] md:text-[24px] lg:text-[28px] font-bold">{book.title}</h3>
+                                        <a
+                                            href="/details-book"
+                                            className="text-[16px] md:text-[18px] lg:text-[20px] font-semibold text-[#F3F630] hover:text-yellow-500 transition-colors duration-200"
+                                        >
+                                            {book.readMoreLink}
+                                        </a>
+                                         {/* Book Rating */}
+                                    {book.rating && (
+                                        <div className="absolute right-3 top-3 flex items-center gap-1 rounded-full px-3 py-1">
+                                            <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                                            <span className="text-sm font-medium ">{book.rating}</span>
+                                        </div>
+                                    )}
+                                    </div>
+                        
+                                   
+                                </div>
+                            </Card>
     );
 };
 

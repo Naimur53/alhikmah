@@ -73,7 +73,7 @@ const ResetPasswordForm = () => {
 
                     {/* Submit Button */}
                     <Button
-                        className="mt-[30px] w-full sign-up-btn bg-primary-500 py-[15px] text-[20px] hover:bg-primary-600"
+                        className="mt-[30px] w-full sign_up_button_bg bg-primary-500 py-[15px] text-[20px] hover:bg-primary-600"
                         type="submit"
                     >
                         সাবমিট 

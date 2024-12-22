@@ -31,7 +31,7 @@ const OTPVerifyForm = () => {
                 {''}
             
             <Button
-                className="mt-[20px] w-full  sign-up-btn py-[8px] lg:py-[30px] text-[14px] lg:text-[17px] hover:bg-primary-600"
+                className="mt-[20px] w-full sign_up_button_bg py-[8px] lg:py-[30px] text-[14px] lg:text-[17px] hover:bg-primary-600"
                 type="submit"
             >
                 পরবর্তী

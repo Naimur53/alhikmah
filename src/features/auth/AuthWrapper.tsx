@@ -20,24 +20,24 @@ const AuthWrapper = ({ children }: { children: React.ReactNode }) => {
       <div className="size-[190px]  absolute roundded-full -z-50 bg-blue-700 bottom-5 left-[20%] blur-[170px]"></div>
 
       {/* Right Column */}
-      <div  className="center hidden  none xl:block w-full overflow-hidden min-w-[600px] max-w-[700px]  signup-right-bg col-span-5 relative h-full bg-primary-900   text-white">
+      <div  className="center hidden  none xl:block overflow-hidden w-[45%] signup-right-bg col-span-5 relative h-[100vh] bg-primary-900   text-white">
         
 
         {/* Content */}
-        <div className="lg:px-20 px-3 sm:px-6 w-full flex h-full py-5 flex-col justify-between">
+        <div className="lg:px-[40px] px-3 sm:px-6 w-full flex h-full py-5 flex-col justify-between">
           {/* Heading */}
           <Link href="/" className="md:my-8 my-5 top-4 flex items-center gap-4 mx-">
             <div className="h-12 w-12 bg-[#FFFFFF] rounded-md"></div>
             <h2 className="text-[18px] md:text-[20px] text-white lg:text-[24px]">আল হিকমাহ </h2>
           </Link>
           {/* center content */}
-          <div className=" text-center my-[19%] mt-[22%] h-full  md:text-start ">
-            <h1 className="lg:text-[28px] md:text-[24px] leading-[40px] pb-[12px]  text-[18px] font-semibold  md:leading-[42px]  text-white ">
+          <div className=" text-center md:text-start ">
+            <h1 className="text-white ">
               ওয়েবসাইটটি{" "}
               <span className="text-yellow-500">ব্যবহারকারীদের</span> পাঠ
               অভিজ্ঞতা প্রদান করবে
             </h1>
-            <p className="text-[14px] noto-font   text-[#98B6CB] text-primary-200 font-normal">
+            <p className="text-[20px] noto-font   text-[#98B6CB] text-primary-200 font-normal">
               ওয়েবসাইটটি ব্যবহারকারীদের একটি সমৃদ্ধ পাঠ অভিজ্ঞতা প্রদান করবে
               যেখানে তারা বিভিন্ন বিষয়বস্তুর উপর ভিত্তি করে বই পড়তে।
             </p>
