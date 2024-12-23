@@ -21,7 +21,7 @@ export function DynamicBanner({ heading }: { heading: string }) {
         }));
 
     return (
-        <header className="w-full rounded-none bg-[url('/images/dynamic-bg.png')] bg-cover bg-center py-[70px] text-white ">
+        <header className="w-full rounded-none bg-[url('/images/dynamic-bg.png')] bg-cover bg-center py-[100px] text-white ">
             <div className=" px-4 sm:px-6 lg:px-8">
                 <h1 className="mb-4 text-center h1 text-white ">{heading}</h1>
                 <div className="flex items-center justify-center space-x-1 text-sm text-gray-300">

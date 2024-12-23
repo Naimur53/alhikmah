@@ -7,7 +7,7 @@ import Image from "next/image";
 function NewBooks() {
   return (
     <div
-      className="bg-[url('/images/booksSectionBg.png')] relative bg-top bg-cover bg-no-repeat bg-[rgba(255,255,255,0.19)] lg:pb-[150px]"
+      className="bg-[url('/images/booksSectionBg.png')] relative bg-top bg-cover bg-no-repeat bg-[rgba(255,255,255,0.19)] lg:pb-[150px] xl_padding"
     >
       {/* Content Section */}
       <div className="p-5">

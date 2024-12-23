@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const BlogCarousel = () => {
     return (
-        <div className="bg-[url('/images/booksSectionBg.png')] bg-top bg-cover bg-no-repeat bg-[rgba(255,255,255,0.19)] lg:pb-[150px] px-[20px]">
+        <div className="bg-[url('/images/booksSectionBg.png')] bg-top bg-cover bg-no-repeat bg-[rgba(255,255,255,0.19)] lg:pb-[150px] xl_padding">
             <div className="container mx-auto px-4 py-12">
                 <Carousel className="w-full">
                     {/* Dynamic Header */}

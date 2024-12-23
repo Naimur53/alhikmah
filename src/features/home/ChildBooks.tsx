@@ -6,7 +6,7 @@ import Image from "next/image";
 
 function ChildBooks() {
     return (
-        <div className="relative p-5">
+        <div className="relative xl_padding">
             <DynamicBooks
                 books={Books}
                 heading1={"শিশু কিশোরদের জন্য "}
@@ -19,7 +19,7 @@ function ChildBooks() {
 
             {/* backgrounds */}
                 <div className="bg-shade  lg:!size-[200px] top-10 left-0 xl:left-10"></div>
-                <div className="bg-shade  lg:!size-[200px] bottom-10 right-[5%] xl:right-[80px]"></div>
+                <div className="bg-shade  lg:!size-[200px] bottom-10 right-[5%] xl:right-[10%]"></div>
 
                 <Image className="bg-star lg:hidden top-[22%]  right-[5%]" src="/images/bgStar.png" height={20} width={20} alt="star"></Image>
                 <Image className="bg-star hidden lg:block top-[5%] lg:top-[0%] right-[10%]" src="/images/bgStar.png" height={40} width={40} alt="star"></Image>

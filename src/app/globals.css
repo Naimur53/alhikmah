@@ -154,6 +154,9 @@ body {
     .navlink_hover {
         @apply bg-gradient-to-r  hover:from-[#FFC641] hover:to-[#FFDD00] transition-all duration-500 rounded-full ease-in-out hover:text-[#0D293B];
     }
+    .xl_padding{
+        @apply xl:px-[60px] 2xl:px-0
+    }
     
 }
 
@@ -226,6 +229,7 @@ html.lenis body {
     background: var(--dark-dark-700, #2A333D);
 
 }
+
 
 .bg-shade{
     width: 130px;

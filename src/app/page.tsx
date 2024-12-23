@@ -18,7 +18,7 @@ import StatsSection from "@/features/home/StatsSection";
 export default function Home() {
     return (
         <>
-            {/* <Navbar /> */}
+            <Navbar />
             <Banner />
             <StatsSection/>
             <FeaturedBook />
@@ -26,7 +26,8 @@ export default function Home() {
             <Donation />
             <ChildBooks />
             <Bukhari />
-            <PopularWriters />
+            {/* on this PopularWriters page there are populerwriters and popularpublishers */}
+            <PopularWriters />  
             {/* <PopularPublishers /> */}
             <HadisBooks />
             <Bukhari />

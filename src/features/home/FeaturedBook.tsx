@@ -57,7 +57,7 @@ export function FeaturedBook() {
   };
 
   return (
-    <div className=" relative flex items-center w-full pt-[120px] mx-5">
+    <div className=" relative flex items-center w-full pt-[120px] xl_padding">
       <div className="relative mx-auto container px-4">
         <Carousel className="w-full">
           <CarouselContent>
@@ -101,7 +101,7 @@ export function FeaturedBook() {
 
       {/* Backgrounds */}
       <div className="bg-shade lg:!size-[200px] -top-10 left-0 xl:-left-10"></div>
-      <div className="bg-shade lg:!size-[200px] xl:right-[80px] bottom-0 md:top-[50%] right-[5%]"></div>
+      <div className="bg-shade lg:!size-[200px] xl:right-[10%] bottom-0 md:top-[50%] right-[5%]"></div>
 
       <Image
         className="bg-star lg:top-[5%] right-4 xl:right-[10%] "

@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const WishlistBooks = () => {
     return (
-        <div className="relative mx-5">
+        <div className="relative mx-5 xl_padding">
             <DynamicBooks
                 books={Books}
                 heading1={"উইশলিস্ট "}
@@ -20,7 +20,7 @@ const WishlistBooks = () => {
             {/* backgorunds */}
             <div className="bg-shade  lg:!size-[170px] -top-10 left-0 xl:-left-10"></div>
             <div className="bg-shade lg:!size-[230px] lg:!blur-[200px] -bottom-10 left-0 xl:-left-10"></div>
-            <div className="bg-shade  lg:!size-[230px] lg:!blur-[200px] xl:right-[80px] bottom-0 md:top-[30%] right-[5%]"></div>
+            <div className="bg-shade  lg:!size-[230px] lg:!blur-[200px]  bottom-0 md:top-[30%] right-[10%]"></div>
 
             <Image className="absolute  top-[2%] right-[4%] z-20 rotate-[60deg]" src="/images/bgStar.png" height={28} width={28} alt="star"></Image> 
             <Image className="absolute  top-[2%] right-[4%] z-20 rotate-[60deg]" src="/images/bgStar.png" height={28} width={28} alt="star"></Image> 
