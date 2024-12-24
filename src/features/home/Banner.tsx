@@ -6,12 +6,12 @@ import BannerSearchBar from '@/components/shared/BannerSearchBar';
 
 export function Banner() {
     return (
-        <div className="flex min-h-[80vh] w-full flex-col items-center bg-[url('/images/bannerBg.png')] bg-cover bg-top bg-no-repeat py-16">
-            <div className="container mx-auto px-4">
+        <div className="flex min-h-[80vh] w-full flex-col items-center bg-[url('/banner.png')] bg-cover bg-top bg-no-repeat py-16  ">
+            <div className="container mx-auto px-4  ">
                 <Image
                     src={Bismillah}
                     alt={"Bismillah"}
-                    className="h-[200px] mx-auto w-[500px] object-contain mb-[40x] lg:mb-[70px]"
+                    className="h-[200px] mx-auto drop-shadow-2xl w-[500px] object-contain mb-[40x] lg:mb-[70px]"
                     height={400}
                     width={400}
                     quality={100}
@@ -25,6 +25,7 @@ export function Banner() {
 
 
             </div>
+            
         </div>
     );
 }
