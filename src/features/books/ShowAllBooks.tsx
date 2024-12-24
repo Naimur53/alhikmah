@@ -49,7 +49,7 @@ function ShowAllBooks() {
                 {/* Books Grid */}
                 <div className="pt-[50px] grid grid-cols-1 gap-[30px] md:grid-cols-2 lg:grid-cols-3">
                     {allbooks.map((ele) => (
-                        <SingleBook key={ele.id} book={ele} />
+                        <SingleBook key={ele.id}  book={ele} />
                     ))}
                 </div>
             </div>

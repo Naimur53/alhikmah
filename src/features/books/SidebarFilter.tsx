@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { useState } from "react";
@@ -7,10 +8,10 @@ import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Separator } from "@/components/ui/separator";
 
-const SidebarFilter = ({ categories }) => {
+const SidebarFilter = ({ categories }:any) => {
   const [openSection, setOpenSection] = useState(null);
 
-  const toggleSection = (section) => {
+  const toggleSection = (section:any) => {
     setOpenSection(openSection === section ? null : section);
   };
 
@@ -26,7 +27,7 @@ const SidebarFilter = ({ categories }) => {
 
       {/* Filters */}
       <Card className="space-y-6 bg-[#F7F7F7] p-[24px] rounded-[8px]">
-        {categories.map((category) => (
+        {categories.map((category:any) => (
           <Card
             key={category.id}
             className="my-2 bg-[#F1F1F1] rounded-[8px] py-[18px] px-[24px]"
@@ -49,7 +50,7 @@ const SidebarFilter = ({ categories }) => {
             >
               <CardContent className="mt-4 space-y-2">
                 <Separator />
-                {category.items.map((item) => (
+                {category.items.map((item:any) => (
                   <div key={item.id} className="flex justify-between items-center">
                     <Label className="text-sm text-foreground">{item.name}</Label>
                     <Checkbox />

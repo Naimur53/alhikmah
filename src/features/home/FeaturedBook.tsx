@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import Image from "next/image";
@@ -45,7 +46,7 @@ const books: Book[] = [
 ];
 
 export function FeaturedBook() {
-  const highlightText = (title) => {
+  const highlightText = (title:any) => {
     const splitTitle = title.split("(৪ খন্ড)");
     return (
       <>
