@@ -20,7 +20,7 @@ function ShowAllBlogs() {
                     />
                 </div>
                     
-                    <div className="flex gap-[30px]">
+                    <div className="hidden md:flex gap-[30px]">
                         {/* Filter Icon */}
                         <button className="flex items-center justify-center rounded-[8px] bg-[#1F618D] p-[15px]">
                             <SlidersHorizontal size={20} className="text-white hover:text-gray-400" />
@@ -41,7 +41,7 @@ function ShowAllBlogs() {
             
         </div> 
 
-        <div className='container mx-auto pt-[50px] xl_container grid grid-cols-1 lg:grid-cols-2 gap-[24px]'>
+        <div className='container mx-auto px-[10px] pt-[50px] xl_container grid grid-cols-1 lg:grid-cols-2 gap-[24px]'>
         {BlogPost.map((post) => (
                             <div key={post.id} className="">
                                 <BlogCard post={post} />
