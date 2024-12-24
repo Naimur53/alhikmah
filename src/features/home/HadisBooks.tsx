@@ -45,7 +45,7 @@ const books: Book[] = [
 
 export function HadisBooks() {
     return (
-        <div className="relative z-20 mt-[100px] flex items-center overflow-hidden rounded-[12px] bg-gradient-to-r from-[#007CE3] to-[#072253]  lg:mb-[100px] lg:mt-[-150px] lg:py-[90px] xl_padding">
+        <div className="relative z-20 mt-0 flex items-center overflow-hidden rounded-[12px] bg-gradient-to-r from-[#007CE3] to-[#072253]  lg:mb-[100px] lg:py-[90px] xl_padding">
             <div className="absolute inset-0 z-0 rounded-[12px]">
                 <div>
                     <Image src={hadis} alt="" height={400}

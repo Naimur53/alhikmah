@@ -67,7 +67,7 @@ const PopularWriters = () => {
                 </Carousel>
             </div>
 
-            <div className="container mx-auto lg:pb-[100px] pb-[60px] ">
+            <div className="container mx-auto">
                 {/* Carousel for Writers */}
                 <Carousel className="w-full p-5">
                     {/* Dynamic Header */}
