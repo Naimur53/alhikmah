@@ -21,9 +21,7 @@ export function Banner() {
                 <div className='pt-[30px] lg:pb-[100px]'>
                     <h2 className='text-center text-white pb-[25px]'>আপনার <span className='text-[#F3F630]'>পছন্দের</span>  বই খুঁজুন সহজেই</h2>
                     <p className='text-[20px] text-center text-white max-w-[652px] mx-auto'>বাংলাদেশের সব চেয়ে বড় অনলাইন লাইব্রেরি। বাংলাদেশের সব চেয়ে বড় অনলাইন লাইব্রেরি। বাংলাদেশের সব চেয়ে বড় অনলাইন লাইব্রেরি।</p>
-                </div>
-
-
+                </div> 
             </div>
         </div>
     );
