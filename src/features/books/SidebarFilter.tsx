@@ -15,7 +15,7 @@ const SidebarFilter = ({ categories }) => {
   };
 
   return (
-    <aside className="w-full lg:w-[26%] p-4">
+    <aside className="w-full xl:w-[30%] p-4">
       {/* Header */}
       <div className="my-10 space-y-1 mx-auto">
         <h1 className="text-2xl md:text-3xl font-bold text-primary">বই সমূহ</h1>

@@ -45,7 +45,7 @@ const SearchInput = () => {
                     <div className="flex  justify-center gap-[20px] rounded-[8px] bg-grey-200 p-[5px] px-[20px]">
                         <div className="w-full">
                             {/* Search Input */}
-                            <CustomFormInput
+                            <CustomFormInput  
                                 label="সার্চ করুন"
                                 name="search"
                                 placeholder="বইয়ের নাম ও লেখকের নাম দিয়ে সার্চ"

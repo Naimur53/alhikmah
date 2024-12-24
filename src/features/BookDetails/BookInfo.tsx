@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { FaFacebookF, FaInstagram, FaPinterestP, FaTwitter } from "react-icons/fa6";
+import DownloadButtonWithModal from "./DownloadButtonWithModal";
 
 function BookInfo() {
     return (
@@ -11,9 +12,7 @@ function BookInfo() {
                         {/* Left Column - Book Cover */}
                         <div className="flex flex-col items-center">
                             <Image height={400} width={400} quality={100} src="/images/hadis1.png" alt="Book Cover" className="w-full max-w-md rounded-lg shadow-md" />
-                            <button className="mt-6 w-full max-w-md rounded-md sign_up_button_bg  py-[25px] text-white transition-colors hover:bg-primary-400">
-                                ডাউনলোড করুন
-                            </button>
+                            <DownloadButtonWithModal/>
                         </div>
 
                         {/* Right Column - Book Details */}
@@ -50,20 +49,20 @@ function BookInfo() {
                             <div className="my-8">
                                 <h3 className="mb-2 text-lg text-[#3B4856]">শেয়ার করুন</h3>
                                 <p className="text-[#3B4856] my-6">সম্পূর্ণ  বইটি শেয়ার করুন। পাশে থাকুন। </p>
-                                <div className="flex gap-[35px] ">
-                                    <a href="#" className="text-[#1a4977] hover:text-[#1F618D] p-6 bg-[#F7F7F7] rounded-[8px] shadow-sm">
-                                        <FaFacebookF size={40} />
+                                <div className="flex gap-[20px] xl:gap-[35px] ">
+                                    <a href="#" className="text-[#1a4977] hover:text-[#1F618D] flex items-center justify-center p-4 xl:p-6 bg-[#F7F7F7] rounded-[8px] shadow-sm">
+                                        <FaFacebookF  className="size-[20px] xl:size-[40px]" />
                                     </a>
-                                    <a href="#" className="text-[#1a4977] hover:text-[#1F618D] p-6 bg-[#F7F7F7] rounded-[8px] shadow-sm">
-                                        <FaInstagram size={40} />
+                                    <a href="#" className="text-[#1a4977] hover:text-[#1F618D] flex items-center justify-center p-4 xl:p-6 bg-[#F7F7F7] rounded-[8px] shadow-sm">
+                                        <FaInstagram className="size-[20px] xl:size-[40px]"/>
                                     </a>
-                                    <a href="#" className="text-[#1a4977] hover:text-[#1F618D] p-6 bg-[#F7F7F7] rounded-[8px] shadow-sm">
-                                        <FaTwitter size={40} />
+                                    <a href="#" className="text-[#1a4977] hover:text-[#1F618D] flex items-center justify-center p-4 xl:p-6 bg-[#F7F7F7] rounded-[8px] shadow-sm">
+                                        <FaTwitter className="size-[20px] xl:size-[40px]"  />
                                     </a>
-                                    <a href="#" className="text-[#1a4977] hover:text-[#1F618D] p-6 bg-[#F7F7F7] rounded-[8px] shadow-sm">
-                                        <FaPinterestP size={40} />
+                                    <a href="#" className="text-[#1a4977] hover:text-[#1F618D] flex items-center justify-center p-4 xl:p-6 bg-[#F7F7F7] rounded-[8px] shadow-sm">
+                                        <FaPinterestP className="size-[20px] xl:size-[40px]"  />
                                     </a>
-                                    <button className="text-[#1a4977] hover:text-[#1F618D] p-6 bg-[#F7F7F7] rounded-[8px] shadow-sm">
+                                    <button className="text-[#1a4977] hover:text-[#1F618D] flex items-center justify-center p-4 xl:p-6 bg-[#F7F7F7] rounded-[8px] shadow-sm">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="40"
@@ -74,6 +73,7 @@ function BookInfo() {
                                             strokeWidth="2"
                                             strokeLinecap="round"
                                             strokeLinejoin="round"
+                                            className="size-[20px] xl:size-[40px]" 
                                         >
                                             <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                                             <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>

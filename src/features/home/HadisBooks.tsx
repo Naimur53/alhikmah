@@ -57,18 +57,18 @@ export function HadisBooks() {
                 <div className="w-full px-4">
                     <Carousel className="w-full">
                         {/* Dynamic Header */}
-                        <div className="flex items-center justify-between">
+                        <div className="md:flex items-center justify-between">
                             <div className="mb-12 md:max-w-[950px]">
-                                <h2 className="pb-[16px] text-[32px] font-semibold leading-[42px] text-white sm:leading-[52px] md:text-[48px] md:leading-[62px]">
+                                <h2 className="pb-[16px] text-[32px] text-center md:text-start font-semibold leading-[42px] text-white sm:leading-[52px] md:text-[48px] md:leading-[62px]">
                                     <span className="text-[#FFDC05]">হাদিসের </span>
                                     বই সমূহ
                                 </h2>
-                                <p className="pb-[30px] text-[18px] text-[#A5ABB1] md:pb-[55px] md:text-[24px] lg:text-[28px]">
+                                <p className="pb-[30px] text-[18px] text-center md:text-start text-[#A5ABB1] md:pb-[55px] md:text-[24px] lg:text-[28px]">
                                     ওয়েবসাইটটি ব্যবহারকারীদের একটি সমৃদ্ধ পাঠ অভিজ্ঞতা প্রদান করবে যেখানে তারা বিভিন্ন
                                     বিষয়বস্তুর উপর ভিত্তি করে বই পড়তে।
                                 </p>
                             </div>
-                            <div className="flex gap-[20px]">
+                            <div className="flex justify-center gap-[20px]">
                                 <CarouselPrevious className="static h-12 w-12 rounded-full border border-[#007CE3] bg-white hover:bg-[#007CE3] hover:text-white" />
                                 <CarouselNext className="static h-12 w-12 rounded-full border border-[#007CE3] bg-white hover:bg-[#007CE3] hover:text-white" />
                             </div>

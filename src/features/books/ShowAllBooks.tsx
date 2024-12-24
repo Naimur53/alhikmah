@@ -37,12 +37,12 @@ const categoriesData = [
 
 function ShowAllBooks() {
     return (
-        <div className="flex flex-col lg:flex-row px-4 lg:px-0 container gap-6 mx-auto">
+        <div className="flex flex-col xl:flex-row xl_padding container gap-6 mx-auto">
             {/* Left Sidebar - Filters */}
             <SidebarFilter categories={categoriesData} />
 
             {/* Right Section - Search and Books */}
-            <div className="w-full lg:w-[74%]">
+            <div className="w-full xl:w-[70%]">
                 {/* Search Input */}
                 <SearchInput />
 

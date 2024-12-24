@@ -16,7 +16,7 @@ const NewsletterForm = () => {
 
     return (
         <div
-            className="container relative bg-gradient-to-r from-[#007CE3] to-[#072253] overflow-hidden lg:h-[328px] mx-auto mt-[100px] lg:mt-[-150px] lg:mb-[100px]  flex min-h-[300px] items-center rounded-[12px] p-4 lg:py-[90px] z-20"
+            className="container relative bg-gradient-to-r from-[#007CE3] to-[#072253] overflow-hidden lg:h-[328px] mx-auto my-[80px] lg:mt-[-150px] lg:mb-[100px]  flex min-h-[300px] items-center rounded-[12px] p-4 lg:py-[90px] z-20"
         >
              <div className="absolute inset-0  rounded-[12px] z-0">
                 <div>

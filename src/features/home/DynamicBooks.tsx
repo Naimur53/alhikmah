@@ -26,9 +26,9 @@ export function DynamicBooks({ heading1, heading2, highlight, description, books
             {/* Carousel */}
             <Carousel className="w-full">
                 {/* Dynamic Header */}
-                <div className="flex justify-between items-center">
+                <div className="md:flex justify-between items-center">
                     <DynamicHeader heading1={heading1} heading2={heading2} highlight={highlight} description={description} />
-                    <div className=" flex gap-[20px]">
+                    <div className=" flex justify-center pt-[20px] md:pt-0 gap-[20px]">
                         <CarouselPrevious className="static h-12 w-12 rounded-full border border-[#007CE3] bg-white hover:text-white hover:bg-[#007CE3]" />
                         <CarouselNext className="static h-12 w-12 rounded-full border border-[#007CE3] bg-white hover:text-white hover:bg-[#007CE3]" />
                 </div>

@@ -12,13 +12,14 @@ export function BlogCard({ post }: BlogCardProps) {
     return (
         <div className="h-full rounded-[10px] bg-[#F7F7F7] p-[30px]">
             <Card className="flex h-full flex-col border-none bg-inherit shadow-none">
-                <div className="h-[300px] w-full overflow-hidden rounded-t-lg">
+                <div className="h-[400px] w-full overflow-hidden rounded-[8px]">
                     <Image
                         src={post.imageUrl}
                         alt={post.title}
                         className="h-full w-full object-cover "
-                        height={250}
-                        width={384}
+                        height={4000}
+                        width={400}
+                        quality={100}
                     />
                 </div>
                 <CardHeader className="px-0">

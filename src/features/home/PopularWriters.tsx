@@ -14,9 +14,9 @@ const PopularWriters = () => {
         <div className="w-full relative bg-[url('/images/writterBg.png')] bg-cover bg-center bg-no-repeat xl_padding py-12 pb-[50px] lg:pb-[100px]">
             <div className="container mx-auto lg:pb-[100px] pb-[60px] lg:pt-[50px] ">
                 {/* Carousel for Writers */}
-                <Carousel className="w-full">
+                <Carousel className="w-full p-5">
                     {/* Dynamic Header */}
-                    <div className="flex items-center justify-between">
+                    <div className="md:flex items-center justify-between">
                         <DynamicHeader
                             heading1={"জনপ্রিয় "}
                             highlight={"লেখক"}
@@ -25,7 +25,7 @@ const PopularWriters = () => {
                                 "ওয়েবসাইটটি ব্যবহারকারীদের একটি সমৃদ্ধ পাঠ অভিজ্ঞতা প্রদান করবে যেখানে তারা বিভিন্ন বিষয়বস্তুর উপর ভিত্তি করে বই পড়তে।"
                             }
                         />
-                        <div className="flex gap-[20px]">
+                        <div className="flex justify-center pt-[20px] md:pt-0 gap-[20px]">
                             <CarouselPrevious className="static h-12 w-12 rounded-full border border-[#007CE3] bg-white hover:bg-[#007CE3] hover:text-white" />
                             <CarouselNext className="static h-12 w-12 rounded-full border border-[#007CE3] bg-white hover:bg-[#007CE3] hover:text-white" />
                         </div>
@@ -71,16 +71,16 @@ const PopularWriters = () => {
                 {/* Carousel for Writers */}
                 <Carousel className="w-full p-5">
                     {/* Dynamic Header */}
-                    <div className="flex items-center justify-between">
+                    <div className="md:flex items-center justify-between">
                         <DynamicHeader
                             heading1={"জনপ্রিয় "}
-                            highlight={"লেখক "}
+                            highlight={"প্রকাশক "}
                             heading2={" সমূহ"}
                             description={
                                 "ওয়েবসাইটটি ব্যবহারকারীদের একটি সমৃদ্ধ পাঠ অভিজ্ঞতা প্রদান করবে যেখানে তারা বিভিন্ন বিষয়বস্তুর উপর ভিত্তি করে বই পড়তে।"
                             }
                         />
-                        <div className="flex gap-[20px]">
+                        <div className="flex justify-center pt-[20px] md:pt-0 gap-[20px]">
                             <CarouselPrevious className="static h-12 w-12 rounded-full border border-[#007CE3] bg-white hover:bg-[#007CE3] hover:text-white" />
                             <CarouselNext className="static h-12 w-12 rounded-full border border-[#007CE3] bg-white hover:bg-[#007CE3] hover:text-white" />
                         </div>
